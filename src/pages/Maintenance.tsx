@@ -88,10 +88,7 @@ export default function Maintenance() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-5">
-              <Wrench size={14} className="text-slate-100" />
-              <span className="text-gray-300 text-sm font-medium">Compressor & Industrial Maintenance</span>
-            </div>
+
             <h1
               className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}

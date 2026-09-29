@@ -71,10 +71,7 @@ export default function Gases() {
       <section className="bg-gradient-to-br from-[#1f2937] via-[#0097B2] to-[#1f2937] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-1.5 mb-5">
-              <Flame size={14} className="text-yellow-200" />
-              <span className="text-yellow-100 text-sm font-medium">Industrial & Medical Gas Supply</span>
-            </div>
+
             <h1
               className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
