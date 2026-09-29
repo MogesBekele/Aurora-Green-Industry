@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Phone, Mail, MapPin, ArrowRight, CheckCircle2, Package, Wrench, Flame, Settings } from 'lucide-react'
+import { Phone, Mail, MapPin, ArrowRight, CheckCircle2, Package, Wrench, Flame, Settings, AlertCircle } from 'lucide-react'
 
 const quickActions = [
   { id: 'qa-quote', icon: ArrowRight, label: 'Request a Quote', subject: 'Request a Quote' },
@@ -35,21 +35,68 @@ export default function Contact() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value })
+    if (errorMessage) setErrorMessage(null)
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setErrorMessage(null)
+
+    if (!form.name.trim() || !form.email.trim() || !form.service.trim() || !form.message.trim()) {
+      setErrorMessage('Please fill in all required fields (Name, Email, Product/Service, and Message).')
+      return
+    }
+
     setLoading(true)
-    // Simulate submission
-    await new Promise((r) => setTimeout(r, 1200))
-    setLoading(false)
-    setSubmitted(true)
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/d.berossa@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          Name: form.name,
+          Company: form.company || 'Not specified',
+          Phone: form.phone || 'Not specified',
+          Email: form.email,
+          'Product or Service Requested': form.service,
+          'Equipment Model or Serial': form.serial || 'Not specified',
+          Message: form.message,
+          _subject: `New Inquiry from ${form.name} [Aurora Green Industry PLC]`,
+          _replyto: form.email,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      })
+
+      const data = await response.json().catch(() => null)
+
+      if (response.ok && (data?.success === 'true' || data?.success === true || !data?.error)) {
+        setSubmitted(true)
+      } else {
+        throw new Error(data?.message || 'Submission failed. Please try again or send email directly.')
+      }
+    } catch (err: unknown) {
+      console.error('Contact submission error:', err)
+      setErrorMessage('Unable to submit automatically. Please use the button below to send your message via email client.')
+    } finally {
+      setLoading(false)
+    }
   }
+
+  const directMailtoHref = `mailto:d.berossa@gmail.com?subject=${encodeURIComponent(
+    `Inquiry: ${form.service || 'Industrial Solutions'} - ${form.name || 'Website Visitor'}`
+  )}&body=${encodeURIComponent(
+    `Name: ${form.name}\nCompany: ${form.company || 'N/A'}\nPhone: ${form.phone || 'N/A'}\nEmail: ${form.email}\nService Requested: ${form.service || 'N/A'}\nEquipment Serial/Model: ${form.serial || 'N/A'}\n\nMessage:\n${form.message}`
+  )}`
 
   const setSubject = (subject: string) => {
     setForm((f) => ({ ...f, service: subject }))
@@ -188,28 +235,52 @@ export default function Contact() {
                     >
                       Message Sent!
                     </h3>
-                    <p className="text-gray-500 text-sm max-w-sm mx-auto leading-relaxed">
-                      Thank you for contacting Aurora Green Industries PLC. Our team will review your
+                    <p className="text-gray-500 text-sm max-w-md mx-auto leading-relaxed">
+                      Thank you for contacting Aurora Green Industries PLC. Your inquiry has been dispatched to{' '}
+                      <span className="font-semibold text-[#111827]">d.berossa@gmail.com</span>. Our team will review your
                       requirement and respond promptly.
                     </p>
                     <button
                       onClick={() => {
                         setSubmitted(false)
+                        setErrorMessage(null)
                         setForm({ name: '', company: '', phone: '', email: '', service: '', serial: '', message: '' })
                       }}
-                      className="mt-6 btn-green text-white font-semibold px-6 py-3 rounded-full text-sm"
+                      className="mt-6 btn-green text-white font-semibold px-6 py-3 rounded-full text-sm cursor-pointer"
                     >
                       Send Another Message
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} noValidate>
+                  <form onSubmit={handleSubmit}>
+                    {/* Honeypot spam prevention */}
+                    <input type="text" name="_honey" className="hidden" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+
                     <h2
-                      className="text-2xl font-display font-800 text-[#111827] mb-7"
+                      className="text-2xl font-display font-800 text-[#111827] mb-1"
                       style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                     >
                       Send Us a Message
                     </h2>
+                    <p className="text-xs text-gray-500 mb-6">
+                      Your inquiry will be delivered to <span className="text-[#0097B2] font-semibold">d.berossa@gmail.com</span>
+                    </p>
+
+                    {errorMessage && (
+                      <div className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-sm text-red-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div className="flex items-start gap-2">
+                          <AlertCircle size={18} className="text-red-500 shrink-0 mt-0.5" />
+                          <span>{errorMessage}</span>
+                        </div>
+                        <a
+                          href={directMailtoHref}
+                          className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#111827] text-white text-xs font-semibold rounded-lg hover:bg-black transition-colors shrink-0"
+                        >
+                          <Mail size={14} />
+                          Send via Email App
+                        </a>
+                      </div>
+                    )}
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
                       <div>
@@ -329,12 +400,12 @@ export default function Contact() {
                       id="contact-submit"
                       type="submit"
                       disabled={loading}
-                      className="btn-green w-full text-white font-semibold py-4 rounded-xl text-sm flex items-center justify-center gap-2 disabled:opacity-60"
+                      className="btn-green w-full text-white font-semibold py-4 rounded-xl text-sm flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer"
                     >
                       {loading ? (
                         <>
                           <div className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
-                          Sending...
+                          Sending to d.berossa@gmail.com...
                         </>
                       ) : (
                         <>
