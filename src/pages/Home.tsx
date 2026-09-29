@@ -53,14 +53,14 @@ const atlasFeatures = [
 ]
 
 const industries = [
-  { icon: Stethoscope, label: 'Healthcare', color: '#2d7a4f' },
-  { icon: Factory, label: 'Manufacturing', color: '#1a472a' },
-  { icon: Hammer, label: 'Welding & Fabrication', color: '#c8922a' },
-  { icon: HardHat, label: 'Construction', color: '#2d7a4f' },
-  { icon: Building2, label: 'Mining', color: '#1a472a' },
-  { icon: Settings, label: 'Industrial Facilities', color: '#c8922a' },
-  { icon: FlaskConical, label: 'Laboratories', color: '#2d7a4f' },
-  { icon: Droplets, label: 'Water & Drilling', color: '#1a472a' },
+  { icon: Stethoscope, label: 'Healthcare', color: '#0097B2' },
+  { icon: Factory, label: 'Manufacturing', color: '#111827' },
+  { icon: Hammer, label: 'Welding & Fabrication', color: '#0097B2' },
+  { icon: HardHat, label: 'Construction', color: '#0097B2' },
+  { icon: Building2, label: 'Mining', color: '#111827' },
+  { icon: Settings, label: 'Industrial Facilities', color: '#0097B2' },
+  { icon: FlaskConical, label: 'Laboratories', color: '#0097B2' },
+  { icon: Droplets, label: 'Water & Drilling', color: '#111827' },
 ]
 
 export default function Home() {
@@ -83,16 +83,16 @@ export default function Home() {
         <div className="absolute inset-0 hero-gradient" />
 
         {/* Decorative green glow */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#2d7a4f] to-transparent opacity-60" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#0097B2] to-transparent opacity-60" />
 
         <div
           ref={heroRef}
           className="reveal relative z-10 text-center px-4 max-w-5xl mx-auto"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#c8922a]/20 border border-[#c8922a]/40 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
-            <div className="w-2 h-2 rounded-full bg-[#c8922a] animate-pulse" />
-            <span className="text-[#e8c270] text-sm font-medium">
+          <div className="inline-flex items-center gap-2 bg-[#0097B2]/20 border border-[#0097B2]/40 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
+            <div className="w-2 h-2 rounded-full bg-[#0097B2] animate-pulse" />
+            <span className="text-[#e6edf3] text-sm font-medium">
               Authorised Atlas Copco Distributor
             </span>
           </div>
@@ -102,10 +102,10 @@ export default function Home() {
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
           >
             AURORA GREEN
-            <span className="block text-[#c8922a]">INDUSTRIES PLC</span>
+            <span className="block text-[#0097B2]">INDUSTRIES PLC</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl text-green-200 font-medium mb-3">
+          <p className="text-xl sm:text-2xl text-gray-300 font-medium mb-3">
             Compressed Air & Industrial Solutions
           </p>
           <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-2">
@@ -121,7 +121,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             {['Reliable Equipment', 'Genuine Parts', 'Technical Expertise'].map((v) => (
               <div key={v} className="flex items-center gap-2 text-white">
-                <CheckCircle2 size={16} className="text-[#4dbf82]" />
+                <CheckCircle2 size={16} className="text-[#0097B2]" />
                 <span className="text-sm font-medium">{v}</span>
               </div>
             ))}
@@ -159,16 +159,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div ref={atlasRef} className="reveal grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-[#f0fdf5] border border-[#2d7a4f]/20 rounded-full px-4 py-1.5 mb-5">
-                <Zap size={14} className="text-[#2d7a4f]" />
-                <span className="text-[#1a472a] text-sm font-semibold">Atlas Copco CSO Solutions</span>
+              <div className="inline-flex items-center gap-2 bg-[#f6f8fa] border border-[#0097B2]/20 rounded-full px-4 py-1.5 mb-5">
+                <Zap size={14} className="text-[#0097B2]" />
+                <span className="text-[#111827] text-sm font-semibold">Atlas Copco CSO Solutions</span>
               </div>
               <h2
-                className="text-3xl sm:text-4xl font-display font-800 text-[#0a1f0e] mb-5 leading-tight"
+                className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-5 leading-tight"
                 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
               >
                 Atlas Copco Compressed
-                <span className="text-[#2d7a4f]"> Air Solutions</span>
+                <span className="text-[#0097B2]"> Air Solutions</span>
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
                 Aurora Green Industries PLC provides Atlas Copco Compressor Service and Optimization
@@ -179,7 +179,7 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                 {atlasFeatures.map((f) => (
                   <div key={f} className="flex items-start gap-2.5">
-                    <CheckCircle2 size={16} className="text-[#2d7a4f] mt-0.5 shrink-0" />
+                    <CheckCircle2 size={16} className="text-[#0097B2] mt-0.5 shrink-0" />
                     <span className="text-sm text-gray-700">{f}</span>
                   </div>
                 ))}
@@ -202,23 +202,23 @@ export default function Home() {
                   alt="Industrial compressors"
                   className="w-full h-80 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1f0e]/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
                     <p className="text-white text-sm font-semibold mb-1">Authorised Distributor</p>
-                    <p className="text-green-200 text-xs">Atlas Copco branded products — Addis Ababa, Ethiopia</p>
+                    <p className="text-gray-300 text-xs">Atlas Copco branded products — Addis Ababa, Ethiopia</p>
                   </div>
                 </div>
               </div>
               {/* Floating stat cards */}
               <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 border border-gray-100">
                 <div className="flex items-center gap-2">
-                  <div className="w-9 h-9 rounded-lg bg-[#f0fdf5] flex items-center justify-center">
-                    <Shield size={18} className="text-[#1a472a]" />
+                  <div className="w-9 h-9 rounded-lg bg-[#f6f8fa] flex items-center justify-center">
+                    <Shield size={18} className="text-[#111827]" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Genuine Parts</p>
-                    <p className="text-sm font-bold text-[#1a472a]">Atlas Copco</p>
+                    <p className="text-sm font-bold text-[#111827]">Atlas Copco</p>
                   </div>
                 </div>
               </div>
@@ -232,7 +232,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#0a1f0e] mb-4"
+              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Our Core Services
@@ -246,13 +246,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Maintenance */}
             <div ref={maintenanceRef} className="reveal card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-              <div className="h-2 bg-gradient-to-r from-[#1a472a] to-[#2d7a4f]" />
+              <div className="h-2 bg-gradient-to-r from-[#111827] to-[#0097B2]" />
               <div className="p-8">
-                <div className="w-14 h-14 rounded-2xl bg-[#f0fdf5] flex items-center justify-center mb-5">
-                  <Wrench size={26} className="text-[#1a472a]" />
+                <div className="w-14 h-14 rounded-2xl bg-[#f6f8fa] flex items-center justify-center mb-5">
+                  <Wrench size={26} className="text-[#111827]" />
                 </div>
                 <h3
-                  className="text-xl font-display font-700 text-[#0a1f0e] mb-3"
+                  className="text-xl font-display font-700 text-[#111827] mb-3"
                   style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
                 >
                   Maintenance & Technical Services
@@ -265,7 +265,7 @@ export default function Home() {
                 <Link
                   to="/contact"
                   id="home-maintenance-cta"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1a472a] hover:text-[#c8922a] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#111827] hover:text-[#007b91] transition-colors"
                 >
                   Request Service <ChevronRight size={14} />
                 </Link>
@@ -274,13 +274,13 @@ export default function Home() {
 
             {/* Gases */}
             <div ref={gasRef} className="reveal card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 animate-delay-200">
-              <div className="h-2 bg-gradient-to-r from-[#c8922a] to-[#d9a847]" />
+              <div className="h-2 bg-gradient-to-r from-[#0097B2] to-[#0097B2]" />
               <div className="p-8">
-                <div className="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center mb-5">
-                  <Flame size={26} className="text-[#c8922a]" />
+                <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-5">
+                  <Flame size={26} className="text-[#0097B2]" />
                 </div>
                 <h3
-                  className="text-xl font-display font-700 text-[#0a1f0e] mb-3"
+                  className="text-xl font-display font-700 text-[#111827] mb-3"
                   style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
                 >
                   Industrial & Medical Gases
@@ -292,7 +292,7 @@ export default function Home() {
                 <Link
                   to="/gases"
                   id="home-gases-cta"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c8922a] hover:text-[#1a472a] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0097B2] hover:text-[#111827] transition-colors"
                 >
                   Explore Gas Solutions <ChevronRight size={14} />
                 </Link>
@@ -307,7 +307,7 @@ export default function Home() {
                   <Package size={26} className="text-[#30363d]" />
                 </div>
                 <h3
-                  className="text-xl font-display font-700 text-[#0a1f0e] mb-3"
+                  className="text-xl font-display font-700 text-[#111827] mb-3"
                   style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
                 >
                   Gas Equipment
@@ -319,7 +319,7 @@ export default function Home() {
                 <Link
                   to="/contact"
                   id="home-gasequip-cta"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-700 hover:text-[#1a472a] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-700 hover:text-[#111827] transition-colors"
                 >
                   Contact Us <ChevronRight size={14} />
                 </Link>
@@ -343,16 +343,16 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 bg-amber-50 border border-[#c8922a]/20 rounded-full px-4 py-1.5 mb-5">
-                <Activity size={14} className="text-[#c8922a]" />
-                <span className="text-[#c8922a] text-sm font-semibold">Gas Supply</span>
+              <div className="inline-flex items-center gap-2 bg-slate-50 border border-[#0097B2]/20 rounded-full px-4 py-1.5 mb-5">
+                <Activity size={14} className="text-[#0097B2]" />
+                <span className="text-[#0097B2] text-sm font-semibold">Gas Supply</span>
               </div>
               <h2
-                className="text-3xl sm:text-4xl font-display font-800 text-[#0a1f0e] mb-5 leading-tight"
+                className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-5 leading-tight"
                 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
               >
                 Industrial & Medical
-                <span className="text-[#c8922a]"> Gas Supply</span>
+                <span className="text-[#0097B2]"> Gas Supply</span>
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
                 We supply oxygen, nitrogen, argon, carbon dioxide and acetylene for healthcare,
@@ -363,9 +363,9 @@ export default function Home() {
                 {['Medical Oxygen', 'Industrial Oxygen', 'Nitrogen', 'Argon', 'Carbon Dioxide', 'Acetylene'].map((g) => (
                   <div
                     key={g}
-                    className="bg-amber-50 rounded-xl px-3 py-2.5 text-center border border-[#c8922a]/15"
+                    className="bg-slate-50 rounded-xl px-3 py-2.5 text-center border border-[#0097B2]/15"
                   >
-                    <span className="text-sm font-medium text-[#6b4c0e]">{g}</span>
+                    <span className="text-sm font-medium text-[#1f2937]">{g}</span>
                   </div>
                 ))}
               </div>
@@ -393,7 +393,7 @@ export default function Home() {
               Industries We Serve
             </h2>
             <div className="divider-gold w-24 mx-auto mb-4" />
-            <p className="text-green-200 max-w-xl mx-auto text-sm">
+            <p className="text-gray-300 max-w-xl mx-auto text-sm">
               Providing compressed-air solutions, Atlas Copco parts, maintenance, gases and gas equipment
               across Ethiopia's industrial sectors.
             </p>
@@ -406,10 +406,10 @@ export default function Home() {
                 to="/industries"
                 className="industry-card rounded-xl p-5 text-center group"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#f0fdf5] flex items-center justify-center mx-auto mb-3 group-hover:bg-[#1a472a] transition-colors">
-                  <Icon size={22} className="text-[#1a472a] group-hover:text-white transition-colors" />
+                <div className="w-12 h-12 rounded-xl bg-[#f6f8fa] flex items-center justify-center mx-auto mb-3 group-hover:bg-[#111827] transition-colors">
+                  <Icon size={22} className="text-[#111827] group-hover:text-white transition-colors" />
                 </div>
-                <p className="text-sm font-semibold text-gray-800 group-hover:text-[#1a472a] transition-colors">
+                <p className="text-sm font-semibold text-gray-800 group-hover:text-[#111827] transition-colors">
                   {label}
                 </p>
               </Link>
@@ -419,10 +419,10 @@ export default function Home() {
       </section>
 
       {/* ── Closing CTA ── */}
-      <section className="py-24 bg-[#0a1f0e] relative overflow-hidden">
+      <section className="py-24 bg-[#111827] relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-[#2d7a4f] -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-[#c8922a] translate-x-1/2 translate-y-1/2" />
+          <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-[#0097B2] -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-[#0097B2] translate-x-1/2 translate-y-1/2" />
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <h2
@@ -457,3 +457,4 @@ export default function Home() {
     </div>
   )
 }
+

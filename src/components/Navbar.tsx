@@ -71,8 +71,8 @@ export default function Navbar() {
                       onMouseLeave={() => setGasOpen(false)}
                       className={`nav-link flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                         isActive(item.path)
-                          ? 'text-[#1a472a] active'
-                          : 'text-gray-700 hover:text-[#1a472a]'
+                          ? 'text-[#111827] active'
+                          : 'text-gray-700 hover:text-[#111827]'
                       }`}
                     >
                       {item.label}
@@ -95,7 +95,7 @@ export default function Navbar() {
                           <Link
                             key={child.path}
                             to={child.path}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f0fdf5] hover:text-[#1a472a] transition-colors border-b border-gray-50 last:border-0"
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f6f8fa] hover:text-[#111827] transition-colors border-b border-gray-50 last:border-0"
                           >
                             {child.label}
                           </Link>
@@ -109,8 +109,8 @@ export default function Navbar() {
                     to={item.path}
                     className={`nav-link px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                       isActive(item.path)
-                        ? 'text-[#1a472a] active'
-                        : 'text-gray-700 hover:text-[#1a472a]'
+                        ? 'text-[#111827] active'
+                        : 'text-gray-700 hover:text-[#111827]'
                     }`}
                   >
                     {item.label}
@@ -146,7 +146,7 @@ export default function Navbar() {
               <div className="flex gap-4 py-3 border-b border-gray-100 mb-2">
                 <a
                   href="tel:+251944999966"
-                  className="flex items-center gap-1.5 text-xs text-[#1a472a] font-medium"
+                  className="flex items-center gap-1.5 text-xs text-[#111827] font-medium"
                 >
                   <Phone size={12} />
                   +251 944 999 966
@@ -155,14 +155,14 @@ export default function Navbar() {
               {navItems.map((item) =>
                 item.children ? (
                   <div key={item.label}>
-                    <div className="px-3 py-2.5 text-xs font-semibold text-[#c8922a] uppercase tracking-wider">
+                    <div className="px-3 py-2.5 text-xs font-semibold text-[#0097B2] uppercase tracking-wider">
                       {item.label}
                     </div>
                     {item.children.map((child) => (
                       <Link
                         key={child.path}
                         to={child.path}
-                        className="block px-6 py-2.5 text-sm text-gray-700 hover:text-[#1a472a] hover:bg-green-50 rounded-lg transition-colors"
+                        className="block px-6 py-2.5 text-sm text-gray-700 hover:text-[#111827] hover:bg-gray-100 rounded-lg transition-colors"
                       >
                         {child.label}
                       </Link>
@@ -174,8 +174,8 @@ export default function Navbar() {
                     to={item.path}
                     className={`block px-3 py-2.5 text-sm font-medium rounded-lg transition-colors ${
                       isActive(item.path)
-                        ? 'text-[#1a472a] bg-green-50'
-                        : 'text-gray-700 hover:text-[#1a472a] hover:bg-green-50'
+                        ? 'text-[#111827] bg-gray-100'
+                        : 'text-gray-700 hover:text-[#111827] hover:bg-gray-100'
                     }`}
                   >
                     {item.label}
@@ -197,3 +197,4 @@ export default function Navbar() {
     </>
   )
 }
+

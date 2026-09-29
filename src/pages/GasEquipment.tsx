@@ -59,7 +59,7 @@ export default function GasEquipment() {
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Gas Cylinders, Valves
-              <span className="text-[#c8922a]"> & Pressure Gauges</span>
+              <span className="text-[#0097B2]"> & Pressure Gauges</span>
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               Aurora Green Industries supplies gas cylinders and related components including cylinder valves,
@@ -81,7 +81,7 @@ export default function GasEquipment() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#0a1f0e] mb-4"
+              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Gas Equipment Range
@@ -99,13 +99,13 @@ export default function GasEquipment() {
                 id={`equip-${id}`}
                 className="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
               >
-                <div className="h-1.5 bg-gradient-to-r from-[#1a472a] to-[#c8922a]" />
+                <div className="h-1.5 bg-gradient-to-r from-[#111827] to-[#0097B2]" />
                 <div className="p-8">
-                  <div className="w-14 h-14 rounded-2xl bg-[#f0fdf5] flex items-center justify-center mb-5">
-                    <Icon size={26} className="text-[#1a472a]" />
+                  <div className="w-14 h-14 rounded-2xl bg-[#f6f8fa] flex items-center justify-center mb-5">
+                    <Icon size={26} className="text-[#111827]" />
                   </div>
                   <h3
-                    className="text-xl font-display font-700 text-[#0a1f0e] mb-3"
+                    className="text-xl font-display font-700 text-[#111827] mb-3"
                     style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
                   >
                     {title}
@@ -114,7 +114,7 @@ export default function GasEquipment() {
                   <ul className="space-y-2">
                     {items.map((item) => (
                       <li key={item} className="flex items-center gap-2 text-sm text-gray-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#2d7a4f] shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0097B2] shrink-0" />
                         {item}
                       </li>
                     ))}
@@ -130,7 +130,7 @@ export default function GasEquipment() {
       <section className="py-16 bg-[#f6f8fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2
-            className="text-2xl font-display font-800 text-[#0a1f0e] mb-4"
+            className="text-2xl font-display font-800 text-[#111827] mb-4"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
           >
             Ready to Request Gas Equipment?
@@ -151,3 +151,4 @@ export default function GasEquipment() {
     </div>
   )
 }
+

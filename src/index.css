@@ -2,25 +2,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-agi-green-950: #0a1f0e;
-  --color-agi-green-900: #0f2d14;
-  --color-agi-green-800: #1a472a;
-  --color-agi-green-700: #1e5c34;
-  --color-agi-green-600: #2d7a4f;
-  --color-agi-green-500: #3a9e68;
-  --color-agi-green-400: #4dbf82;
-  --color-agi-green-300: #72d49c;
-  --color-agi-green-200: #a1e5bc;
-  --color-agi-green-100: #d1f5e0;
-  --color-agi-green-50: #f0fdf5;
-
-  --color-agi-gold-900: #6b4c0e;
-  --color-agi-gold-700: #9a6e1a;
-  --color-agi-gold-600: #b8821f;
-  --color-agi-gold-500: #c8922a;
-  --color-agi-gold-400: #d9a847;
-  --color-agi-gold-300: #e8c270;
-  --color-agi-gold-100: #fdf3dc;
+  --color-agi-cyan-900: #004b59;
+  --color-agi-cyan-700: #007b91;
+  --color-agi-cyan-600: #008ba4;
+  --color-agi-cyan-500: #0097B2;
+  --color-agi-cyan-400: #33c4d9;
+  --color-agi-cyan-100: #e6f5f7;
+  --color-agi-cyan-50: #f2fbff;
 
   --color-agi-slate-900: #0d1117;
   --color-agi-slate-800: #161b22;
@@ -60,7 +48,7 @@ body {
   background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1a472a;
+  background: #30363d;
   border-radius: 3px;
 }
 
@@ -109,8 +97,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(45, 122, 79, 0.4); }
-  50% { box-shadow: 0 0 0 12px rgba(45, 122, 79, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 151, 178, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(0, 151, 178, 0); }
 }
 
 .animate-fadeInUp {
@@ -140,19 +128,18 @@ body {
   opacity: 0;
 }
 
-/* Hero gradient overlay */
 .hero-gradient {
   background: linear-gradient(
     135deg,
-    rgba(10, 31, 14, 0.92) 0%,
-    rgba(26, 71, 42, 0.80) 50%,
-    rgba(13, 17, 23, 0.75) 100%
+    rgba(13, 17, 23, 0.92) 0%,
+    rgba(33, 38, 45, 0.80) 50%,
+    rgba(0, 0, 0, 0.75) 100%
   );
 }
 
 /* Section gradients */
 .section-gradient-green {
-  background: linear-gradient(135deg, #0f2d14 0%, #1a472a 50%, #1e5c34 100%);
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #000000 100%);
 }
 
 .section-gradient-dark {
@@ -169,29 +156,29 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-/* Gold shimmer button */
+/* Gold shimmer button -> Cyan button */
 .btn-gold {
-  background: linear-gradient(135deg, #c8922a, #d9a847, #c8922a);
-  background-size: 200% auto;
-  transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  background: #0097B2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-gold:hover {
-  background-position: right center;
+  background: #007b91;
   transform: translateY(-1px);
-  box-shadow: 0 8px 25px rgba(200, 146, 42, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 151, 178, 0.4);
 }
 
-/* Green button */
+/* Green button -> Dark Slate Button */
 .btn-green {
-  background: linear-gradient(135deg, #1a472a, #2d7a4f);
+  background: #161b22;
+  color: white;
   transition: all 0.3s ease;
 }
 
 .btn-green:hover {
-  background: linear-gradient(135deg, #1e5c34, #3a9e68);
+  background: #30363d;
   transform: translateY(-1px);
-  box-shadow: 0 8px 25px rgba(45, 122, 79, 0.35);
+  box-shadow: 0 8px 25px rgba(22, 27, 34, 0.35);
 }
 
 /* Outline button */
@@ -218,7 +205,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #c8922a;
+  background: #0097B2;
   transition: width 0.3s ease;
 }
 
@@ -230,13 +217,13 @@ body {
 /* Divider */
 .divider-gold {
   height: 3px;
-  background: linear-gradient(90deg, transparent, #c8922a, transparent);
+  background: linear-gradient(90deg, transparent, #0097B2, transparent);
 }
 
 /* Stats counter */
 .stat-card {
-  background: linear-gradient(135deg, rgba(26,71,42,0.08), rgba(45,122,79,0.05));
-  border: 1px solid rgba(26,71,42,0.12);
+  background: linear-gradient(135deg, rgba(22,27,34,0.08), rgba(48,54,61,0.05));
+  border: 1px solid rgba(22,27,34,0.12);
 }
 
 /* Service process step */
@@ -251,7 +238,7 @@ body {
   top: 50%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #2d7a4f, transparent);
+  background: linear-gradient(90deg, #30363d, transparent);
 }
 
 /* Industry card */
@@ -270,7 +257,7 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #1a472a, #c8922a);
+  background: linear-gradient(90deg, #30363d, #0097B2);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -292,8 +279,8 @@ body {
 }
 
 .form-input:focus {
-  border-color: #2d7a4f;
-  box-shadow: 0 0 0 3px rgba(45,122,79,0.12);
+  border-color: #0097B2;
+  box-shadow: 0 0 0 3px rgba(0,151,178,0.12);
 }
 
 /* Mobile menu */

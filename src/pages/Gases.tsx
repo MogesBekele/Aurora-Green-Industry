@@ -6,8 +6,8 @@ const gases = [
     id: 'medical-oxygen',
     title: 'Medical Oxygen',
     icon: Heart,
-    color: '#2d7a4f',
-    bg: '#f0fdf5',
+    color: '#0097B2',
+    bg: '#f6f8fa',
     description:
       'We supply medical oxygen for healthcare applications, supporting hospitals and other healthcare facilities that depend on a reliable oxygen supply.',
     applications: ['Hospitals', 'Healthcare facilities', 'Respiratory therapy', 'Emergency services'],
@@ -16,8 +16,8 @@ const gases = [
     id: 'industrial-oxygen',
     title: 'Industrial Oxygen',
     icon: Flame,
-    color: '#c8922a',
-    bg: '#fdf3dc',
+    color: '#0097B2',
+    bg: '#1f2937',
     description:
       'Industrial oxygen is used in welding, metal fabrication, cutting and other industrial processes. Supplied in cylinders according to customer requirements.',
     applications: ['Metal cutting', 'Welding', 'Fabrication', 'Industrial processes'],
@@ -26,8 +26,8 @@ const gases = [
     id: 'nitrogen',
     title: 'Nitrogen',
     icon: FlaskConical,
-    color: '#1a472a',
-    bg: '#f0fdf5',
+    color: '#111827',
+    bg: '#f6f8fa',
     description:
       'Nitrogen is used in industrial, manufacturing and technical applications where an inert gas is required for blanketing, purging and pressure testing.',
     applications: ['Industrial processing', 'Manufacturing', 'Purging', 'Pressure testing'],
@@ -56,8 +56,8 @@ const gases = [
     id: 'acetylene',
     title: 'Acetylene',
     icon: Flame,
-    color: '#c8922a',
-    bg: '#fdf3dc',
+    color: '#0097B2',
+    bg: '#1f2937',
     description:
       'Acetylene is used in gas welding, cutting and other high-temperature industrial applications. Aurora Green Industries supplies acetylene for welding and fabrication requirements.',
     applications: ['Oxy-acetylene welding', 'Metal cutting', 'Brazing', 'High-temp applications'],
@@ -68,7 +68,7 @@ export default function Gases() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#6b4c0e] via-[#c8922a] to-[#9a6e1a] py-20">
+      <section className="bg-gradient-to-br from-[#1f2937] via-[#0097B2] to-[#1f2937] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-1.5 mb-5">
@@ -90,7 +90,7 @@ export default function Gases() {
             <Link
               to="/contact"
               id="gases-hero-cta"
-              className="bg-white text-[#9a6e1a] font-semibold px-6 py-3 rounded-full text-sm inline-flex items-center gap-2 hover:bg-yellow-50 transition-colors"
+              className="bg-white text-[#1f2937] font-semibold px-6 py-3 rounded-full text-sm inline-flex items-center gap-2 hover:bg-yellow-50 transition-colors"
             >
               Request Gas Supply <ArrowRight size={15} />
             </Link>
@@ -103,7 +103,7 @@ export default function Gases() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#0a1f0e] mb-4"
+              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Our Gas Portfolio
@@ -130,7 +130,7 @@ export default function Gases() {
                     <Icon size={22} style={{ color }} />
                   </div>
                   <h3
-                    className="text-xl font-display font-700 text-[#0a1f0e] mb-3"
+                    className="text-xl font-display font-700 text-[#111827] mb-3"
                     style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
                   >
                     {title}
@@ -156,7 +156,7 @@ export default function Gases() {
       {/* CTA */}
       <section className="py-16 bg-[#f6f8fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-gradient-to-br from-[#6b4c0e] to-[#c8922a] rounded-2xl p-10 text-center text-white">
+          <div className="bg-gradient-to-br from-[#1f2937] to-[#0097B2] rounded-2xl p-10 text-center text-white">
             <h2
               className="text-2xl font-display font-800 mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
@@ -170,7 +170,7 @@ export default function Gases() {
             <Link
               to="/contact"
               id="gases-supply-cta"
-              className="bg-white text-[#9a6e1a] font-semibold px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2 hover:bg-yellow-50 transition-colors"
+              className="bg-white text-[#1f2937] font-semibold px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2 hover:bg-yellow-50 transition-colors"
             >
               Request Gas Supply <ArrowRight size={15} />
             </Link>
@@ -180,3 +180,4 @@ export default function Gases() {
     </div>
   )
 }
+

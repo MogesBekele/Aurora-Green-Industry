@@ -13,7 +13,7 @@ const values = [
 const businesses = [
   {
     title: 'Compressed Air & Atlas Copco Solutions',
-    color: '#1a472a',
+    color: '#111827',
     items: [
       'Atlas Copco Compressor Service & Optimization (CSO)',
       'Genuine parts, service kits, filters and separators',
@@ -26,7 +26,7 @@ const businesses = [
   },
   {
     title: 'Industrial & Medical Gases',
-    color: '#c8922a',
+    color: '#0097B2',
     items: [
       'Oxygen (medical and industrial)',
       'Nitrogen',
@@ -57,25 +57,25 @@ export default function About() {
       {/* Hero */}
       <section
         className="py-24 relative overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #0a1f0e, #1a472a, #0f2d14)' }}
+        style={{ background: 'linear-gradient(135deg, #111827, #111827, #161b22)' }}
       >
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#c8922a] translate-x-1/3 -translate-y-1/3" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#2d7a4f] -translate-x-1/3 translate-y-1/3" />
+          <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#0097B2] translate-x-1/3 -translate-y-1/3" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#0097B2] -translate-x-1/3 translate-y-1/3" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-5">
-              <span className="text-green-200 text-sm font-medium">About Aurora Green Industries</span>
+              <span className="text-gray-300 text-sm font-medium">About Aurora Green Industries</span>
             </div>
             <h1
               className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Building Reliable Industrial
-              <span className="text-[#c8922a]"> Solutions for Ethiopia</span>
+              <span className="text-[#0097B2]"> Solutions for Ethiopia</span>
             </h1>
-            <p className="text-green-100 text-lg leading-relaxed">
+            <p className="text-gray-300 text-lg leading-relaxed">
               Aurora Green Industries PLC (AGI) is an Ethiopian industrial solutions company providing compressed-air
               equipment, genuine spare parts, maintenance and technical services, industrial and medical gases,
               cylinders and gas-handling equipment.
@@ -90,13 +90,13 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2
-                className="text-3xl font-display font-800 text-[#0a1f0e] mb-5"
+                className="text-3xl font-display font-800 text-[#111827] mb-5"
                 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
               >
                 Our Approach
               </h2>
-              <div className="bg-[#f0fdf5] rounded-2xl p-7 mb-6 border border-[#2d7a4f]/15">
-                <p className="text-[#1a472a] font-semibold text-lg mb-3">Products + Parts + Service</p>
+              <div className="bg-[#f6f8fa] rounded-2xl p-7 mb-6 border border-[#0097B2]/15">
+                <p className="text-[#111827] font-semibold text-lg mb-3">Products + Parts + Service</p>
                 <p className="text-gray-700 text-sm leading-relaxed">
                   We believe industrial customers need more than a product. A compressor needs the right parts and
                   maintenance. A gas customer needs dependable supply and appropriate cylinders and equipment.
@@ -111,8 +111,8 @@ export default function About() {
               {/* Vision / Mission */}
               <div className="space-y-5">
                 <div>
-                  <h3 className="font-semibold text-[#1a472a] mb-2 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#c8922a]" />
+                  <h3 className="font-semibold text-[#111827] mb-2 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-[#0097B2]" />
                     Our Vision
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -120,8 +120,8 @@ export default function About() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#1a472a] mb-2 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#c8922a]" />
+                  <h3 className="font-semibold text-[#111827] mb-2 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-[#0097B2]" />
                     Our Mission
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -156,7 +156,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#0a1f0e] mb-4"
+              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Our Business
@@ -170,7 +170,7 @@ export default function About() {
                 <div className="h-1.5" style={{ background: color }} />
                 <div className="p-7">
                   <h3
-                    className="text-lg font-display font-700 text-[#0a1f0e] mb-4"
+                    className="text-lg font-display font-700 text-[#111827] mb-4"
                     style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
                   >
                     {title}
@@ -207,10 +207,10 @@ export default function About() {
             {values.map(({ icon: Icon, title, description }) => (
               <div key={title} className="text-center">
                 <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center mx-auto mb-4">
-                  <Icon size={24} className="text-[#c8922a]" />
+                  <Icon size={24} className="text-[#0097B2]" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">{title}</h3>
-                <p className="text-green-200/70 text-xs leading-relaxed">{description}</p>
+                <p className="text-gray-300/70 text-xs leading-relaxed">{description}</p>
               </div>
             ))}
           </div>
@@ -221,7 +221,7 @@ export default function About() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2
-            className="text-2xl font-display font-800 text-[#0a1f0e] mb-4"
+            className="text-2xl font-display font-800 text-[#111827] mb-4"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
           >
             Ready to Work With Aurora Green Industries?
@@ -242,3 +242,4 @@ export default function About() {
     </div>
   )
 }
+

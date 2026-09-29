@@ -80,26 +80,26 @@ export default function Maintenance() {
       <section
         className="relative py-20 overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, #0a1f0e 0%, #1a472a 60%, #0d1117 100%)',
+          background: 'linear-gradient(135deg, #111827 0%, #111827 60%, #111827 100%)',
         }}
       >
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#2d7a4f] translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#0097B2] translate-x-1/2 -translate-y-1/2" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-5">
-              <Wrench size={14} className="text-green-300" />
-              <span className="text-green-200 text-sm font-medium">Compressor & Industrial Maintenance</span>
+              <Wrench size={14} className="text-slate-100" />
+              <span className="text-gray-300 text-sm font-medium">Compressor & Industrial Maintenance</span>
             </div>
             <h1
               className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Maintenance &
-              <span className="text-[#c8922a]"> Technical Services</span>
+              <span className="text-[#0097B2]"> Technical Services</span>
             </h1>
-            <p className="text-green-100 text-lg leading-relaxed mb-8">
+            <p className="text-gray-300 text-lg leading-relaxed mb-8">
               Aurora Green Industries PLC provides technical maintenance and service support for compressors
               and industrial equipment, from scheduled preventive maintenance to emergency troubleshooting.
             </p>
@@ -120,7 +120,7 @@ export default function Maintenance() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2
-                className="text-3xl font-display font-800 text-[#0a1f0e] mb-5"
+                className="text-3xl font-display font-800 text-[#111827] mb-5"
                 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
               >
                 Compressor Maintenance
@@ -132,7 +132,7 @@ export default function Maintenance() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {serviceItems.map((item) => (
                   <div key={item} className="flex items-start gap-2.5">
-                    <CheckCircle2 size={15} className="text-[#2d7a4f] mt-0.5 shrink-0" />
+                    <CheckCircle2 size={15} className="text-[#0097B2] mt-0.5 shrink-0" />
                     <span className="text-sm text-gray-700">{item}</span>
                   </div>
                 ))}
@@ -141,11 +141,11 @@ export default function Maintenance() {
             <div className="grid grid-cols-1 gap-5">
               {serviceTypes.slice(0, 3).map(({ id, icon: Icon, title, description }) => (
                 <div key={id} className="flex gap-4 p-5 rounded-xl bg-[#f6f8fa] border border-gray-100">
-                  <div className="w-10 h-10 rounded-xl bg-[#f0fdf5] flex items-center justify-center shrink-0">
-                    <Icon size={18} className="text-[#1a472a]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#f6f8fa] flex items-center justify-center shrink-0">
+                    <Icon size={18} className="text-[#111827]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#0a1f0e] text-sm mb-1">{title}</h3>
+                    <h3 className="font-semibold text-[#111827] text-sm mb-1">{title}</h3>
                     <p className="text-xs text-gray-500 leading-relaxed">{description}</p>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ export default function Maintenance() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#0a1f0e] mb-4"
+              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Service Capabilities
@@ -175,11 +175,11 @@ export default function Maintenance() {
                 id={`maint-${id}`}
                 className="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm p-7"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#f0fdf5] flex items-center justify-center mb-4">
-                  <Icon size={22} className="text-[#1a472a]" />
+                <div className="w-12 h-12 rounded-xl bg-[#f6f8fa] flex items-center justify-center mb-4">
+                  <Icon size={22} className="text-[#111827]" />
                 </div>
                 <h3
-                  className="text-lg font-display font-700 text-[#0a1f0e] mb-2"
+                  className="text-lg font-display font-700 text-[#111827] mb-2"
                   style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
                 >
                   {title}
@@ -188,7 +188,7 @@ export default function Maintenance() {
                 <ul className="space-y-1.5">
                   {items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-xs text-gray-600">
-                      <span className="w-1 h-1 rounded-full bg-[#2d7a4f] shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-[#0097B2] shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -210,18 +210,18 @@ export default function Maintenance() {
               Service Process
             </h2>
             <div className="divider-gold w-24 mx-auto mb-4" />
-            <p className="text-green-200 text-sm">A clear, five-step approach to every service engagement.</p>
+            <p className="text-gray-300 text-sm">A clear, five-step approach to every service engagement.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {processSteps.map(({ num, title, description }) => (
               <div key={num} className="text-center">
-                <div className="w-14 h-14 rounded-full bg-[#c8922a] text-white font-display font-800 text-xl flex items-center justify-center mx-auto mb-4"
+                <div className="w-14 h-14 rounded-full bg-[#0097B2] text-white font-display font-800 text-xl flex items-center justify-center mx-auto mb-4"
                   style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}>
                   {num}
                 </div>
                 <h3 className="text-white font-semibold text-sm mb-2">{title}</h3>
-                <p className="text-green-200/80 text-xs leading-relaxed">{description}</p>
+                <p className="text-gray-300/80 text-xs leading-relaxed">{description}</p>
               </div>
             ))}
           </div>
@@ -240,3 +240,4 @@ export default function Maintenance() {
     </div>
   )
 }
+

@@ -68,9 +68,9 @@ export default function Contact() {
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Let's Discuss
-              <span className="text-[#c8922a]"> Your Requirement</span>
+              <span className="text-[#0097B2]"> Your Requirement</span>
             </h1>
-            <p className="text-green-100 text-lg leading-relaxed">
+            <p className="text-gray-300 text-lg leading-relaxed">
               Whether you need an Atlas Copco part, compressor service, industrial gas, cylinder, valve,
               pressure gauge or another industrial solution, contact Aurora Green Industries PLC.
             </p>
@@ -88,7 +88,7 @@ export default function Contact() {
                 key={id}
                 id={id}
                 onClick={() => setSubject(subject)}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-full border-2 border-[#1a472a] text-[#1a472a] text-sm font-semibold hover:bg-[#1a472a] hover:text-white transition-all"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-full border-2 border-[#111827] text-[#111827] text-sm font-semibold hover:bg-[#111827] hover:text-white transition-all"
               >
                 <Icon size={14} />
                 {label}
@@ -106,47 +106,47 @@ export default function Contact() {
             <div className="lg:col-span-1 space-y-6">
               <div>
                 <h2
-                  className="text-2xl font-display font-800 text-[#0a1f0e] mb-6"
+                  className="text-2xl font-display font-800 text-[#111827] mb-6"
                   style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                 >
                   Contact Information
                 </h2>
                 <div className="space-y-5">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#1a472a] flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-2xl bg-[#111827] flex items-center justify-center shrink-0">
                       <Phone size={18} className="text-white" />
                     </div>
                     <div>
                       <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Phone</p>
                       <a
                         href="tel:+251944999966"
-                        className="text-[#1a472a] font-semibold hover:text-[#c8922a] transition-colors"
+                        className="text-[#111827] font-semibold hover:text-[#007b91] transition-colors"
                       >
                         +251 944 999 966
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#1a472a] flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-2xl bg-[#111827] flex items-center justify-center shrink-0">
                       <Mail size={18} className="text-white" />
                     </div>
                     <div>
                       <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Email</p>
                       <a
                         href="mailto:d.berossa@gmail.com"
-                        className="text-[#1a472a] font-semibold hover:text-[#c8922a] transition-colors text-sm break-all"
+                        className="text-[#111827] font-semibold hover:text-[#007b91] transition-colors text-sm break-all"
                       >
                         d.berossa@gmail.com
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#1a472a] flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-2xl bg-[#111827] flex items-center justify-center shrink-0">
                       <MapPin size={18} className="text-white" />
                     </div>
                     <div>
                       <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Location</p>
-                      <p className="text-[#1a472a] font-semibold">Addis Ababa, Ethiopia</p>
+                      <p className="text-[#111827] font-semibold">Addis Ababa, Ethiopia</p>
                       <p className="text-gray-500 text-sm">Aurora Green Industries PLC</p>
                     </div>
                   </div>
@@ -154,8 +154,8 @@ export default function Contact() {
               </div>
 
               {/* Info box */}
-              <div className="bg-[#0a1f0e] rounded-2xl p-6 text-white">
-                <h3 className="font-semibold mb-3 text-[#c8922a]">What to Include</h3>
+              <div className="bg-[#111827] rounded-2xl p-6 text-white">
+                <h3 className="font-semibold mb-3 text-[#0097B2]">What to Include</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
                   {[
                     'Product or service required',
@@ -166,7 +166,7 @@ export default function Contact() {
                     'Delivery location',
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-2">
-                      <CheckCircle2 size={12} className="text-[#4dbf82] shrink-0" />
+                      <CheckCircle2 size={12} className="text-[#0097B2] shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -179,11 +179,11 @@ export default function Contact() {
               <div id="contact-form" className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-10">
                 {submitted ? (
                   <div className="text-center py-12">
-                    <div className="w-16 h-16 rounded-full bg-[#f0fdf5] flex items-center justify-center mx-auto mb-5">
-                      <CheckCircle2 size={32} className="text-[#2d7a4f]" />
+                    <div className="w-16 h-16 rounded-full bg-[#f6f8fa] flex items-center justify-center mx-auto mb-5">
+                      <CheckCircle2 size={32} className="text-[#0097B2]" />
                     </div>
                     <h3
-                      className="text-2xl font-display font-800 text-[#0a1f0e] mb-3"
+                      className="text-2xl font-display font-800 text-[#111827] mb-3"
                       style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                     >
                       Message Sent!
@@ -205,7 +205,7 @@ export default function Contact() {
                 ) : (
                   <form onSubmit={handleSubmit} noValidate>
                     <h2
-                      className="text-2xl font-display font-800 text-[#0a1f0e] mb-7"
+                      className="text-2xl font-display font-800 text-[#111827] mb-7"
                       style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                     >
                       Send Us a Message
@@ -353,3 +353,4 @@ export default function Contact() {
     </div>
   )
 }
+

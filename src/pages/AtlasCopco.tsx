@@ -93,7 +93,7 @@ export default function AtlasCopco() {
               <span className="text-gray-300"> Service & Optimization</span>
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed mb-8 font-medium">
-              Aurora Green Industries PLC is an Authorised Distributor in Addis Ababa for Atlas Copco branded products.
+              Aurora Green Industries PLC is an Authorised Distributor for Atlas Copco branded products.
               We provide Compressor Service and Optimization (CSO) solutions covering genuine parts, maintenance,
               digital services and compressed-air optimization.
             </p>
@@ -148,7 +148,7 @@ export default function AtlasCopco() {
                 </div>
                 <div>
                   <h3
-                    className="text-lg font-display font-700 text-[#0a1f0e] mb-2"
+                    className="text-lg font-display font-700 text-[#111827] mb-2"
                     style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
                   >
                     {title}
@@ -166,7 +166,7 @@ export default function AtlasCopco() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
             <h2
-              className="text-2xl font-display font-800 text-[#0a1f0e] mb-4"
+              className="text-2xl font-display font-800 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Parts & Service Request
@@ -228,3 +228,4 @@ export default function AtlasCopco() {
     </div>
   )
 }
+

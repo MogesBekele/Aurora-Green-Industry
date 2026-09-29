@@ -6,8 +6,8 @@ const industries = [
     id: 'healthcare',
     icon: Stethoscope,
     title: 'Healthcare',
-    color: '#2d7a4f',
-    bg: '#f0fdf5',
+    color: '#0097B2',
+    bg: '#f6f8fa',
     description:
       'Medical oxygen, gas cylinders, cylinder valves, pressure gauges, gas equipment, gas supply and applicable technical support for hospitals and healthcare facilities.',
     solutions: ['Medical oxygen supply', 'Gas cylinders', 'Cylinder valves', 'Pressure gauges', 'Gas equipment', 'Technical support'],
@@ -16,8 +16,8 @@ const industries = [
     id: 'manufacturing',
     icon: Factory,
     title: 'Manufacturing',
-    color: '#1a472a',
-    bg: '#f0fdf5',
+    color: '#111827',
+    bg: '#f6f8fa',
     description:
       'Atlas Copco compressors and CSO solutions, genuine parts, service kits, filters, lubricants, compressor maintenance and industrial gases for manufacturing facilities.',
     solutions: ['Atlas Copco CSO', 'Genuine spare parts', 'Service kits', 'Compressor maintenance', 'Industrial gases', 'Filters & lubricants'],
@@ -26,8 +26,8 @@ const industries = [
     id: 'welding-fabrication',
     icon: Hammer,
     title: 'Welding & Metal Fabrication',
-    color: '#c8922a',
-    bg: '#fdf3dc',
+    color: '#0097B2',
+    bg: '#1f2937',
     description:
       'Oxygen, acetylene, argon, carbon dioxide, cylinders, cylinder valves, pressure gauges, regulators and related equipment for welding and fabrication operations.',
     solutions: ['Oxygen', 'Acetylene', 'Argon shielding gas', 'CO₂', 'Cylinders & valves', 'Regulators & gauges'],
@@ -46,8 +46,8 @@ const industries = [
     id: 'mining',
     icon: Building2,
     title: 'Mining',
-    color: '#1a472a',
-    bg: '#f0fdf5',
+    color: '#111827',
+    bg: '#f6f8fa',
     description:
       'Compressed-air equipment, genuine Atlas Copco spare parts, compressor maintenance, preventive maintenance support, industrial gases and gas equipment for mining operations.',
     solutions: ['Compressed-air equipment', 'Atlas Copco parts', 'Preventive maintenance', 'Compressor service', 'Industrial gases', 'Gas equipment'],
@@ -56,8 +56,8 @@ const industries = [
     id: 'industrial-facilities',
     icon: Settings,
     title: 'Industrial Facilities',
-    color: '#2d7a4f',
-    bg: '#f0fdf5',
+    color: '#0097B2',
+    bg: '#f6f8fa',
     description:
       'Atlas Copco compressors and CSO solutions, genuine parts, maintenance, industrial gases and gas equipment for industrial facilities and plants.',
     solutions: ['Atlas Copco CSO', 'Genuine parts', 'Preventive maintenance', 'Major service', 'Industrial gases', 'Gas equipment'],
@@ -76,8 +76,8 @@ const industries = [
     id: 'water-drilling',
     icon: Droplets,
     title: 'Water, Drilling & Field Applications',
-    color: '#2d7a4f',
-    bg: '#f0fdf5',
+    color: '#0097B2',
+    bg: '#f6f8fa',
     description:
       'Where applicable, compressors, compressor parts, maintenance, industrial gases and gas equipment for water, drilling and field operations.',
     solutions: ['Compressors', 'Compressor parts', 'Field maintenance', 'Industrial gases', 'Gas equipment', 'Technical support'],
@@ -92,17 +92,17 @@ export default function Industries() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-5">
-              <Factory size={14} className="text-green-200" />
-              <span className="text-green-200 text-sm font-medium">Industries We Serve</span>
+              <Factory size={14} className="text-gray-300" />
+              <span className="text-gray-300 text-sm font-medium">Industries We Serve</span>
             </div>
             <h1
               className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Industrial Solutions for
-              <span className="text-[#c8922a]"> Ethiopia's Industries</span>
+              <span className="text-[#0097B2]"> Ethiopia's Industries</span>
             </h1>
-            <p className="text-green-100 text-lg leading-relaxed">
+            <p className="text-gray-300 text-lg leading-relaxed">
               Different industries have different equipment, gas and maintenance requirements. Aurora Green Industries
               provides compressed-air solutions, genuine Atlas Copco parts, maintenance and technical services,
               industrial and medical gases, cylinders and gas equipment.
@@ -130,7 +130,7 @@ export default function Industries() {
                   </div>
                   <div className="flex-1">
                     <h3
-                      className="text-xl font-display font-700 text-[#0a1f0e] mb-3"
+                      className="text-xl font-display font-700 text-[#111827] mb-3"
                       style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
                     >
                       {title}
@@ -159,7 +159,7 @@ export default function Industries() {
       <section className="py-16 bg-[#f6f8fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2
-            className="text-2xl font-display font-800 text-[#0a1f0e] mb-4"
+            className="text-2xl font-display font-800 text-[#111827] mb-4"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
           >
             Don't See Your Industry?
@@ -180,3 +180,4 @@ export default function Industries() {
     </div>
   )
 }
+
