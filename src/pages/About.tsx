@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom'
 import { ArrowRight, Shield, Eye, Target, Heart, TrendingUp } from 'lucide-react'
 
@@ -136,7 +137,7 @@ export default function About() {
             <div className="flex flex-col items-center justify-center">
               <div className="bg-[#f6f8fa] rounded-3xl p-12 w-full flex flex-col items-center border border-gray-100">
                 <img
-                  src="/agi_logo.jpg"
+                  src="/agi_logo_new.png"
                   alt="Aurora Green Industries PLC"
                   className="h-48 w-auto object-contain mb-6"
                 />

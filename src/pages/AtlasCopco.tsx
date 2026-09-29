@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle2, ExternalLink, Package, Wrench, Cpu, Zap, Filter, Droplets, ChevronRight } from 'lucide-react'
+import { CheckCircle2, ExternalLink, Package, Wrench, Cpu, Zap, Filter, Droplets } from 'lucide-react'
 
 const services = [
   {
@@ -8,8 +8,8 @@ const services = [
     title: 'Genuine Atlas Copco Parts',
     description:
       'We supply genuine Atlas Copco parts for compressor maintenance and reliable operation. Includes compressor elements, valves, motors and other genuine compressor components.',
-    accent: '#1a472a',
-    bg: '#f0fdf5',
+    accent: '#0097B2',
+    bg: '#f3f4f6',
   },
   {
     id: 'service-kits',
@@ -17,8 +17,8 @@ const services = [
     title: 'Service Kits',
     description:
       'Pre-packaged maintenance kits for scheduled compressor service interventions — designed to make planned maintenance efficient and complete.',
-    accent: '#2d7a4f',
-    bg: '#f0fdf5',
+    accent: '#0097B2',
+    bg: '#f3f4f6',
   },
   {
     id: 'filters-separators',
@@ -26,8 +26,8 @@ const services = [
     title: 'Filters & Separators',
     description:
       'Air, oil and line filtration solutions, including applicable filters and separators that support clean, reliable compressed-air systems.',
-    accent: '#1a472a',
-    bg: '#f0fdf5',
+    accent: '#0097B2',
+    bg: '#f3f4f6',
   },
   {
     id: 'lubricants',
@@ -35,8 +35,8 @@ const services = [
     title: 'Lubricants & Consumables',
     description:
       'Atlas Copco lubricants and consumables applicable to compressor maintenance and operation, sourced as genuine products.',
-    accent: '#c8922a',
-    bg: '#fdf3dc',
+    accent: '#0097B2',
+    bg: '#f3f4f6',
   },
   {
     id: 'maintenance-plans',
@@ -44,8 +44,8 @@ const services = [
     title: 'Preventive & Predictive Maintenance',
     description:
       'Maintenance and service support designed around scheduled interventions and equipment requirements, helping customers plan and budget for uptime.',
-    accent: '#1a472a',
-    bg: '#f0fdf5',
+    accent: '#0097B2',
+    bg: '#f3f4f6',
   },
   {
     id: 'digital-services',
@@ -53,8 +53,8 @@ const services = [
     title: 'Digital & Smart Services — Industry 4.0',
     description:
       'Digital and smart services including Optimizer and SMARTLINK solutions for connected compressor monitoring and data-driven maintenance.',
-    accent: '#30363d',
-    bg: '#f6f8fa',
+    accent: '#0097B2',
+    bg: '#f3f4f6',
   },
   {
     id: 'energy-optimization',
@@ -62,8 +62,8 @@ const services = [
     title: 'Energy & Optimization Services',
     description:
       'Energy recovery, AIRScan, AIRnet, controllers and upgrades within the CSO portfolio, supporting compressed-air efficiency.',
-    accent: '#c8922a',
-    bg: '#fdf3dc',
+    accent: '#0097B2',
+    bg: '#f3f4f6',
   },
   {
     id: 'air-treatment',
@@ -71,8 +71,8 @@ const services = [
     title: 'Air Treatment Accessories',
     description:
       'Air-treatment accessories supporting compressed-air system requirements including dryers, aftercoolers, and related components.',
-    accent: '#2d7a4f',
-    bg: '#f0fdf5',
+    accent: '#0097B2',
+    bg: '#f3f4f6',
   },
 ]
 
@@ -80,20 +80,19 @@ export default function AtlasCopco() {
   return (
     <div>
       {/* Page hero */}
-      <section className="section-gradient-green py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="bg-slate-900 py-20 relative overflow-hidden">
+        {/* Subtle background overlay to match the metallic/dark blue feel */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-700/40 via-slate-900 to-black pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-5">
-              <span className="text-green-200 text-sm font-medium">Authorised Distributor — Addis Ababa</span>
-            </div>
             <h1
               className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Atlas Copco Compressor
-              <span className="text-[#c8922a]"> Service & Optimization</span>
+              <span className="text-gray-300"> Service & Optimization</span>
             </h1>
-            <p className="text-green-100 text-lg leading-relaxed mb-8">
+            <p className="text-gray-300 text-lg leading-relaxed mb-8 font-medium">
               Aurora Green Industries PLC is an Authorised Distributor in Addis Ababa for Atlas Copco branded products.
               We provide Compressor Service and Optimization (CSO) solutions covering genuine parts, maintenance,
               digital services and compressed-air optimization.
@@ -102,16 +101,16 @@ export default function AtlasCopco() {
               <Link
                 to="/contact"
                 id="atlas-cta-parts"
-                className="btn-gold text-white font-semibold px-6 py-3 rounded-full text-sm flex items-center gap-2"
+                className="bg-[#0097B2] text-white hover:bg-[#007b91] transition-colors font-bold px-7 py-3.5 rounded text-sm flex items-center gap-2 shadow-lg"
               >
-                Request Genuine Parts <ArrowRight size={15} />
+                Request Genuine Parts
               </Link>
               <Link
                 to="/contact"
                 id="atlas-cta-service"
-                className="btn-outline-white text-white font-semibold px-6 py-3 rounded-full text-sm flex items-center gap-2"
+                className="bg-[#0097B2] text-white hover:bg-[#007b91] transition-colors font-bold px-7 py-3.5 rounded text-sm flex items-center gap-2 shadow-lg"
               >
-                Request Compressor Service <ChevronRight size={15} />
+                Request Compressor Service
               </Link>
             </div>
           </div>
@@ -123,12 +122,12 @@ export default function AtlasCopco() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#0a1f0e] mb-4"
+              className="text-3xl sm:text-4xl font-display font-800 text-slate-900 mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               CSO Product & Service Portfolio
             </h2>
-            <div className="divider-gold w-24 mx-auto mb-4" />
+            <div className="w-24 h-1 bg-[#0097B2] mx-auto mb-4" />
             <p className="text-gray-500 max-w-2xl mx-auto">
               Our Atlas Copco Compressor Service and Optimization offering covers the following products and services.
             </p>
@@ -185,8 +184,8 @@ export default function AtlasCopco() {
                 'Current equipment condition',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5">
-                  <CheckCircle2 size={15} className="text-[#2d7a4f] shrink-0" />
-                  <span className="text-sm text-gray-700">{item}</span>
+                  <CheckCircle2 size={16} className="text-[#0097B2] shrink-0" />
+                  <span className="text-sm font-medium text-slate-700">{item}</span>
                 </div>
               ))}
             </div>
@@ -194,16 +193,16 @@ export default function AtlasCopco() {
               <Link
                 to="/contact"
                 id="atlas-parts-request"
-                className="btn-green text-white font-semibold px-6 py-3 rounded-full text-sm flex items-center gap-2"
+                className="bg-[#0097B2] text-white hover:bg-[#007b91] transition-colors font-bold px-7 py-3 rounded text-sm flex items-center gap-2"
               >
-                Request Genuine Parts <ArrowRight size={15} />
+                Request Genuine Parts
               </Link>
               <Link
                 to="/contact"
                 id="atlas-service-request"
-                className="btn-gold text-white font-semibold px-6 py-3 rounded-full text-sm flex items-center gap-2"
+                className="bg-[#0097B2] text-white hover:bg-[#007b91] transition-colors font-bold px-7 py-3 rounded text-sm flex items-center gap-2"
               >
-                Request Compressor Service <ArrowRight size={15} />
+                Request Compressor Service
               </Link>
             </div>
           </div>
@@ -219,7 +218,7 @@ export default function AtlasCopco() {
             target="_blank"
             rel="noopener noreferrer"
             id="atlas-official-link"
-            className="inline-flex items-center gap-2 text-[#1a472a] font-semibold hover:text-[#c8922a] transition-colors"
+            className="inline-flex items-center gap-2 text-[#0097B2] font-semibold hover:text-[#007b91] transition-colors"
           >
             atlascopco.com/en-et
             <ExternalLink size={15} />

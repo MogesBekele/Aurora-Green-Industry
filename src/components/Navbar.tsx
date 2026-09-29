@@ -55,24 +55,10 @@ export default function Navbar() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 shrink-0">
               <img
-                src="/agi_logo.jpg"
+                src="/agi_logo_new.png"
                 alt="Aurora Green Industries PLC"
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
-              <div className="hidden sm:block">
-                <div
-                  className="font-display font-800 text-[#1a472a] leading-tight text-sm"
-                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
-                >
-                  AURORA GREEN
-                </div>
-                <div
-                  className="font-display text-[#c8922a] leading-tight text-xs tracking-widest"
-                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 600 }}
-                >
-                  INDUSTRIES PLC
-                </div>
-              </div>
             </Link>
 
             {/* Desktop nav */}

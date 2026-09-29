@@ -93,7 +93,7 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 bg-[#c8922a]/20 border border-[#c8922a]/40 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
             <div className="w-2 h-2 rounded-full bg-[#c8922a] animate-pulse" />
             <span className="text-[#e8c270] text-sm font-medium">
-              Authorised Atlas Copco Distributor — Addis Ababa
+              Authorised Atlas Copco Distributor
             </span>
           </div>
 
@@ -127,11 +127,11 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 mb-20 sm:mt-0 sm:mb-0">
             <Link
               to="/atlas-copco"
               id="hero-cta-atlas"
-              className="btn-gold text-white font-semibold px-8 py-4 rounded-full text-sm flex items-center gap-2 justify-center"
+              className="btn-gold text-white font-semibold px-10 py-5 rounded-full text-sm flex items-center gap-2 justify-center"
             >
               Explore Atlas Copco Solutions
               <ArrowRight size={16} />
@@ -139,7 +139,7 @@ export default function Home() {
             <Link
               to="/contact"
               id="hero-cta-contact"
-              className="btn-outline-white text-white font-semibold px-8 py-4 rounded-full text-sm flex items-center gap-2 justify-center"
+              className="btn-outline-white text-white font-semibold px-10 py-5 rounded-full text-sm flex items-center gap-2 justify-center"
             >
               Contact Us
               <ChevronRight size={16} />

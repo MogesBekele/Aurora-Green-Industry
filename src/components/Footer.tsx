@@ -11,26 +11,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-5">
+            <div className="flex items-center mb-5">
               <img
-                src="/agi_logo.jpg"
+                src="/agi_logo_new.png"
                 alt="Aurora Green Industries PLC"
-                className="h-12 w-auto rounded-lg bg-white p-1 object-contain"
+                className="h-20 w-auto rounded-lg bg-white p-2 object-contain"
               />
-              <div>
-                <div
-                  className="font-display text-white font-800 text-sm leading-tight"
-                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
-                >
-                  AURORA GREEN
-                </div>
-                <div
-                  className="text-[#c8922a] text-xs tracking-widest"
-                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 600 }}
-                >
-                  INDUSTRIES PLC
-                </div>
-              </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Compressed Air & Industrial Solutions — Atlas Copco Compressors, Genuine Parts, Maintenance Services & Industrial Gases.
