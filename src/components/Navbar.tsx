@@ -50,10 +50,10 @@ export default function Navbar() {
             : 'bg-white shadow-sm'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-18 py-3">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-14 xl:px-16">
+          <div className="flex items-center justify-between min-h-[88px] py-3">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 shrink-0">
+            <Link to="/" className="flex items-center gap-3 shrink-0 mr-12 lg:mr-20 xl:mr-28">
               <img
                 src="/agi_logo_new.png"
                 alt="Aurora Green Industries PLC"
@@ -62,65 +62,69 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden lg:flex items-center gap-1">
-              {navItems.map((item) =>
-                item.children ? (
-                  <div key={item.label} className="relative group">
-                    <button
-                      onMouseEnter={() => setGasOpen(true)}
-                      onMouseLeave={() => setGasOpen(false)}
-                      className={`nav-link flex items-center gap-1 px-4 py-2 text-base font-bold rounded-md transition-colors ${
+            <div className="hidden lg:flex items-center">
+              <div className="flex items-center gap-1 xl:gap-2">
+                {navItems.map((item) =>
+                  item.children ? (
+                    <div key={item.label} className="relative group">
+                      <button
+                        onMouseEnter={() => setGasOpen(true)}
+                        onMouseLeave={() => setGasOpen(false)}
+                        className={`nav-link flex items-center gap-1 px-3.5 xl:px-4 py-2 text-base font-bold rounded-md transition-colors ${
+                          isActive(item.path)
+                            ? 'text-[#111827] active'
+                            : 'text-gray-700 hover:text-[#111827]'
+                        }`}
+                      >
+                        {item.label}
+                        <ChevronDown
+                          size={14}
+                          className={`transition-transform ${gasOpen ? 'rotate-180' : ''}`}
+                        />
+                      </button>
+                      <div
+                        onMouseEnter={() => setGasOpen(true)}
+                        onMouseLeave={() => setGasOpen(false)}
+                        className={`absolute top-full left-0 pt-1 transition-all duration-200 ${
+                          gasOpen
+                            ? 'opacity-100 visible translate-y-0'
+                            : 'opacity-0 invisible -translate-y-2'
+                        }`}
+                      >
+                        <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden min-w-56">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.path}
+                              to={child.path}
+                              className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-[#f6f8fa] hover:text-[#111827] transition-colors border-b border-gray-50 last:border-0"
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className={`nav-link px-3.5 xl:px-4 py-2 text-base font-bold rounded-md transition-colors ${
                         isActive(item.path)
                           ? 'text-[#111827] active'
                           : 'text-gray-700 hover:text-[#111827]'
                       }`}
                     >
                       {item.label}
-                      <ChevronDown
-                        size={14}
-                        className={`transition-transform ${gasOpen ? 'rotate-180' : ''}`}
-                      />
-                    </button>
-                    <div
-                      onMouseEnter={() => setGasOpen(true)}
-                      onMouseLeave={() => setGasOpen(false)}
-                      className={`absolute top-full left-0 pt-1 transition-all duration-200 ${
-                        gasOpen
-                          ? 'opacity-100 visible translate-y-0'
-                          : 'opacity-0 invisible -translate-y-2'
-                      }`}
-                    >
-                      <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden min-w-56">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.path}
-                            to={child.path}
-                            className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-[#f6f8fa] hover:text-[#111827] transition-colors border-b border-gray-50 last:border-0"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    className={`nav-link px-4 py-2 text-base font-bold rounded-md transition-colors ${
-                      isActive(item.path)
-                        ? 'text-[#111827] active'
-                        : 'text-gray-700 hover:text-[#111827]'
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                )
-              )}
+                    </Link>
+                  )
+                )}
+              </div>
+
+              {/* Generous space between Contact and Request a Quote */}
               <Link
                 to="/contact"
                 id="nav-cta-contact"
-                className="ml-4 btn-gold text-white text-base font-bold px-6 py-3 rounded-full"
+                className="ml-12 lg:ml-20 xl:ml-28 btn-gold text-white text-base font-bold px-8 py-3.5 rounded-full shrink-0 shadow-sm"
               >
                 Request a Quote
               </Link>
