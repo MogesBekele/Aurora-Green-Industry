@@ -107,11 +107,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-gray-400 text-xs font-semibold tracking-wider uppercase">Scroll</span>
-          <div className="w-px h-8 bg-gray-400" />
-        </div>
       </section>
 
       {/* ── Atlas Copco Section ── */}
