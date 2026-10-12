@@ -16,27 +16,7 @@ import {
   Droplets,
   Phone,
 } from 'lucide-react'
-import { useEffect, useRef } from 'react'
-
-function useReveal() {
-  const ref = useRef<HTMLDivElement>(null)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('visible')
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.1 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
-  return ref
-}
+import { useRevealAll } from '../hooks/useReveal'
 
 const atlasFeatures = [
   'Genuine Atlas Copco parts & service kits',
@@ -59,11 +39,10 @@ const industries = [
 ]
 
 export default function Home() {
-  const heroRef = useReveal()
-  const atlasRef = useReveal()
+  const pageRef = useRevealAll()
 
   return (
-    <div>
+    <div ref={pageRef}>
       {/* ── Hero ── */}
       <section
         className="relative min-h-[92vh] flex items-center justify-center overflow-hidden"
@@ -74,16 +53,11 @@ export default function Home() {
         }}
       >
         <div className="absolute inset-0 hero-gradient" />
-
-        {/* Decorative green glow */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#0097B2] opacity-60" />
 
-        <div
-          ref={heroRef}
-          className="reveal relative z-10 text-center px-4 max-w-5xl mx-auto"
-        >
+        <div className="reveal relative z-10 text-center px-4 max-w-5xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#0097B2]/20 border border-[#0097B2]/40 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
+          <div className="reveal inline-flex items-center gap-2 bg-[#0097B2]/20 border border-[#0097B2]/40 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
             <div className="w-2 h-2 rounded-full bg-[#0097B2] animate-pulse" />
             <span className="text-[#e6edf3] text-sm font-medium">
               Authorised Atlas Copco Distributor
@@ -91,22 +65,21 @@ export default function Home() {
           </div>
 
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-900 text-white leading-tight mb-4"
+            className="reveal text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-900 text-white leading-tight mb-4"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
           >
             AURORA GREEN
             <span className="block text-[#0097B2]">INDUSTRIES PLC</span>
           </h1>
 
-          <p className="text-2xl sm:text-3xl text-white font-bold mb-4">
+          <p className="reveal text-2xl sm:text-3xl text-white font-bold mb-4">
             Compressed Air & Industrial Solutions
           </p>
-          <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-8 font-medium">
+          <p className="reveal text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-8 font-medium">
             Authorised distributor of Atlas Copco compressors, genuine parts, maintenance, and industrial & medical gases in Ethiopia.
           </p>
 
-          {/* Value props */}
-          <div className="flex flex-wrap justify-center gap-8 mb-10">
+          <div className="reveal flex flex-wrap justify-center gap-8 mb-10">
             {['Reliable Equipment', 'Genuine Parts', 'Technical Expertise'].map((v) => (
               <div key={v} className="flex items-center gap-2.5 text-white">
                 <CheckCircle2 size={20} className="text-[#0097B2]" />
@@ -115,7 +88,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 mb-20 sm:mt-0 sm:mb-0">
+          <div className="reveal flex flex-col sm:flex-row gap-4 justify-center mt-8 mb-20 sm:mt-0 sm:mb-0">
             <Link
               to="/atlas-copco"
               id="hero-cta-atlas"
@@ -135,7 +108,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
           <span className="text-gray-400 text-xs">Scroll</span>
           <div className="w-px h-8 bg-gray-400" />
@@ -145,8 +117,8 @@ export default function Home() {
       {/* ── Atlas Copco Section ── */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div ref={atlasRef} className="reveal grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="reveal-left">
               <div className="inline-flex items-center gap-2 bg-[#f6f8fa] border border-[#0097B2]/20 rounded-full px-4 py-1.5 mb-5">
                 <Zap size={14} className="text-[#0097B2]" />
                 <span className="text-[#111827] text-sm font-semibold">Atlas Copco CSO Solutions</span>
@@ -161,9 +133,9 @@ export default function Home() {
               <p className="text-gray-600 text-lg leading-relaxed mb-6 font-medium">
                 Authorised distributor of genuine Atlas Copco parts, preventive maintenance kits, and smart diagnostics.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8 stagger-children">
                 {atlasFeatures.map((f) => (
-                  <div key={f} className="flex items-center gap-2.5">
+                  <div key={f} className="reveal flex items-center gap-2.5">
                     <CheckCircle2 size={18} className="text-[#0097B2] shrink-0" />
                     <span className="text-base font-semibold text-slate-800">{f}</span>
                   </div>
@@ -179,9 +151,8 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Card visual */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="reveal-right relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl reveal-scale">
                 <img
                   src="/hero_compressor.jpg"
                   alt="Industrial compressors"
@@ -195,8 +166,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {/* Floating stat cards */}
-              <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 border border-gray-100">
+              <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 border border-gray-100 animate-float">
                 <div className="flex items-center gap-2.5">
                   <div className="w-10 h-10 rounded-lg bg-[#f6f8fa] flex items-center justify-center">
                     <Shield size={20} className="text-[#111827]" />
@@ -212,12 +182,11 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* ── Gas Visual Section ── */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1 reveal-left">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="/gas_cylinders.jpg"
@@ -226,7 +195,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="order-1 lg:order-2">
+            <div className="order-1 lg:order-2 reveal-right">
               <div className="inline-flex items-center gap-2 bg-slate-50 border border-[#0097B2]/20 rounded-full px-4 py-1.5 mb-5">
                 <Activity size={14} className="text-[#0097B2]" />
                 <span className="text-[#0097B2] text-sm font-semibold">Gas Supply</span>
@@ -241,13 +210,13 @@ export default function Home() {
               <p className="text-gray-600 text-lg leading-relaxed mb-6 font-medium">
                 High-purity oxygen, nitrogen, argon, CO₂, and acetylene with full cylinder supply and accessories.
               </p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8 stagger-children">
                 {['Medical Oxygen', 'Industrial Oxygen', 'Nitrogen', 'Argon', 'Carbon Dioxide', 'Acetylene'].map((g) => (
                   <div
                     key={g}
-                    className="bg-[#f6f8fa] rounded-xl px-3 py-3 text-center border border-gray-200"
+                    className="reveal bg-[#f6f8fa] rounded-xl px-3 py-3 text-center border border-gray-200"
                   >
-                    <span className="text-sm sm:text-base font-bold text-[#111827]">{g}</span>
+                    <span className="text-base font-bold text-[#111827]">{g}</span>
                   </div>
                 ))}
               </div>
@@ -267,7 +236,7 @@ export default function Home() {
       {/* ── Industries Grid ── */}
       <section className="py-24 bg-[#f6f8fa] border-t border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14">
+          <div className="reveal text-center mb-14">
             <h2
               className="text-3xl sm:text-5xl font-display font-900 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
@@ -275,17 +244,17 @@ export default function Home() {
               Industries We Serve
             </h2>
             <div className="divider-gold w-24 mx-auto mb-4" />
-            <p className="text-gray-600 max-w-xl mx-auto text-base sm:text-lg font-medium">
-              Tailored compressed-air and gas engineering solutions across Ethiopia's key sectors.
+            <p className="text-gray-500 text-base font-medium">
+              Tailored solutions across Ethiopia's key sectors.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 stagger-children">
             {industries.map(({ icon: Icon, label }) => (
               <Link
                 key={label}
                 to="/industries"
-                className="industry-card rounded-xl p-5 text-center group bg-white shadow-sm border border-gray-200"
+                className="reveal industry-card rounded-xl p-5 text-center group bg-white shadow-sm border border-gray-200"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#f6f8fa] flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0097B2] transition-colors">
                   <Icon size={22} className="text-[#111827] group-hover:text-white transition-colors" />
@@ -301,7 +270,7 @@ export default function Home() {
 
       {/* ── Closing CTA ── */}
       <section className="py-20 bg-white relative overflow-hidden border-t border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+        <div className="reveal max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <h2
             className="text-3xl sm:text-5xl font-display font-900 text-[#111827] mb-4 leading-tight"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
@@ -333,4 +302,3 @@ export default function Home() {
     </div>
   )
 }
-

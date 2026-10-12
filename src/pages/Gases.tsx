@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Flame, Heart, Factory, FlaskConical, Hammer } from 'lucide-react'
+import { useRevealAll } from '../hooks/useReveal'
 
 const gases = [
   {
@@ -59,12 +60,13 @@ const gases = [
 ]
 
 export default function Gases() {
+  const pageRef = useRevealAll()
   return (
-    <div>
+    <div ref={pageRef}>
       {/* Hero */}
       <section className="bg-[#f6f8fa] py-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl reveal-left">
             <h1
               className="text-4xl sm:text-6xl font-display font-900 text-[#111827] mb-4 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
@@ -89,7 +91,7 @@ export default function Gases() {
       {/* Gas grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10">
+          <div className="reveal text-center mb-10">
             <h2
               className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
@@ -97,17 +99,17 @@ export default function Gases() {
               Our Gas Products
             </h2>
             <div className="divider-gold w-24 mx-auto mb-3" />
-            <p className="text-gray-500 max-w-xl mx-auto text-sm">
+            <p className="text-gray-500 max-w-xl mx-auto text-base">
               Cylinder supply, gas-handling equipment and delivery for each product.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
             {gases.map(({ id, icon: Icon, title, description, applications, color, bg }) => (
               <div
                 key={id}
                 id={`gas-${id}`}
-                className="card-hover rounded-2xl border border-gray-100 overflow-hidden shadow-sm"
+                className="reveal card-hover rounded-2xl border border-gray-100 overflow-hidden shadow-sm"
               >
                 <div className="h-1.5" style={{ backgroundColor: color }} />
                 <div className="p-7">
@@ -123,12 +125,12 @@ export default function Gases() {
                   >
                     {title}
                   </h3>
-                  <p className="text-base text-gray-600 leading-relaxed mb-4">{description}</p>
+                  <p className="text-lg text-gray-600 leading-relaxed mb-4">{description}</p>
                   <div className="flex flex-wrap gap-2">
                     {applications.map((app) => (
                       <span
                         key={app}
-                        className="text-xs sm:text-sm font-semibold px-3 py-1 rounded-full bg-gray-50 text-gray-700 border border-gray-200"
+                        className="text-sm font-semibold px-3 py-1 rounded-full bg-gray-50 text-gray-700 border border-gray-200"
                       >
                         {app}
                       </span>
@@ -144,14 +146,14 @@ export default function Gases() {
       {/* CTA */}
       <section className="py-14 bg-[#f6f8fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-white border border-gray-200 shadow-sm rounded-2xl p-8 text-center">
+          <div className="reveal bg-white border border-gray-200 shadow-sm rounded-2xl p-8 text-center">
             <h2
               className="text-2xl font-display font-800 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Gas Supply Request
             </h2>
-            <p className="text-gray-600 mb-5 leading-relaxed max-w-lg mx-auto text-sm">
+            <p className="text-gray-600 mb-5 leading-relaxed max-w-lg mx-auto text-base">
               Contact us with the gas type, quantity, cylinder size, and delivery location.
             </p>
             <Link

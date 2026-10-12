@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Stethoscope, Factory, Hammer, HardHat, Building2, Settings, FlaskConical, Droplets } from 'lucide-react'
+import { useRevealAll } from '../hooks/useReveal'
 
 const industries = [
   {
@@ -77,12 +78,13 @@ const industries = [
 ]
 
 export default function Industries() {
+  const pageRef = useRevealAll()
   return (
-    <div>
+    <div ref={pageRef}>
       {/* Hero */}
       <section className="bg-[#f6f8fa] py-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl reveal-left">
             <h1
               className="text-4xl sm:text-6xl font-display font-900 text-[#111827] mb-4 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
@@ -100,40 +102,26 @@ export default function Industries() {
       {/* Industries grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {industries.map(({ id, icon: Icon, title, description, solutions, color, bg }) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 stagger-children">
+            {industries.map(({ id, icon: Icon, title, color, bg }) => (
               <div
                 key={id}
                 id={`industry-${id}`}
-                className="industry-card rounded-2xl p-8"
+                className="reveal industry-card rounded-2xl p-8"
               >
-                <div className="flex items-start gap-5">
+                <div className="flex items-center gap-5">
                   <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0"
+                    className="w-16 h-16 rounded-2xl flex items-center justify-center shrink-0"
                     style={{ backgroundColor: bg }}
                   >
-                    <Icon size={26} style={{ color }} />
+                    <Icon size={30} style={{ color }} />
                   </div>
-                  <div className="flex-1">
-                    <h3
-                      className="text-xl sm:text-2xl font-display font-800 text-[#111827] mb-2"
-                      style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
-                    >
-                      {title}
-                    </h3>
-                    <p className="text-base text-gray-600 leading-relaxed mb-4">{description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {solutions.map((s) => (
-                        <span
-                          key={s}
-                          className="text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full border text-gray-800"
-                          style={{ borderColor: `${color}40`, backgroundColor: bg }}
-                        >
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                  <h3
+                    className="text-2xl sm:text-3xl font-display font-800 text-[#111827]"
+                    style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+                  >
+                    {title}
+                  </h3>
                 </div>
               </div>
             ))}
@@ -143,7 +131,7 @@ export default function Industries() {
 
       {/* CTA */}
       <section className="py-14 bg-[#f6f8fa]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center reveal">
           <h2
             className="text-2xl font-display font-800 text-[#111827] mb-3"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}

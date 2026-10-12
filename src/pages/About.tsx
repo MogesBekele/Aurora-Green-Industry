@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom'
 import { ArrowRight, Shield, Eye, Target, Heart, TrendingUp } from 'lucide-react'
+import { useRevealAll } from '../hooks/useReveal'
 
 const values = [
   { icon: Shield, title: 'Reliability', description: 'Dependable products and delivery customers count on.' },
@@ -44,12 +45,13 @@ const businesses = [
 ]
 
 export default function About() {
+  const pageRef = useRevealAll()
   return (
-    <div>
+    <div ref={pageRef}>
       {/* Hero */}
       <section className="py-20 relative overflow-hidden bg-[#f6f8fa] border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl reveal-left">
             <h1
               className="text-4xl sm:text-6xl font-display font-900 text-[#111827] mb-4 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
@@ -68,7 +70,7 @@ export default function About() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
-            <div>
+            <div className="reveal-left">
               <h2
                 className="text-3xl font-display font-800 text-[#111827] mb-5"
                 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
@@ -77,7 +79,7 @@ export default function About() {
               </h2>
               <div className="bg-[#f6f8fa] rounded-2xl p-6 mb-5 border border-[#0097B2]/15">
                 <p className="text-[#111827] font-bold text-xl mb-1">Products + Parts + Service</p>
-                <p className="text-gray-600 text-base leading-relaxed">
+                <p className="text-gray-600 text-lg leading-relaxed">
                   Genuine OEM equipment, pre-emptive maintenance, and responsive technical engineering — under one roof.
                 </p>
               </div>
@@ -97,7 +99,7 @@ export default function About() {
                     <span className="w-2 h-2 rounded-full bg-[#0097B2]" />
                     Our Mission
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed pl-4">
+                  <p className="text-gray-600 text-base leading-relaxed pl-4">
                     Provide dependable equipment, genuine parts, gases and technical services while supporting the productivity of the industries we serve.
                   </p>
                 </div>
@@ -105,14 +107,14 @@ export default function About() {
             </div>
 
             {/* Logo */}
-            <div className="flex flex-col items-center justify-center">
+            <div className="reveal-right flex flex-col items-center justify-center">
               <div className="bg-[#f6f8fa] rounded-3xl p-10 w-full flex flex-col items-center border border-gray-100">
                 <img
                   src="/agi_logo_new.png"
                   alt="Aurora Green Industries PLC"
                   className="h-44 w-auto object-contain mb-4"
                 />
-                <p className="text-center text-sm text-gray-500 leading-relaxed max-w-xs">
+                <p className="text-center text-base text-gray-500 leading-relaxed max-w-xs">
                   Aurora Green Industries PLC — serving a growing range of industrial customers across Ethiopia.
                 </p>
               </div>
@@ -134,9 +136,9 @@ export default function About() {
             <div className="divider-gold w-24 mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
             {businesses.map(({ title, items, color }) => (
-              <div key={title} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div key={title} className="reveal bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
                 <div className="h-1.5" style={{ background: color }} />
                 <div className="p-6">
                   <h3
@@ -147,7 +149,7 @@ export default function About() {
                   </h3>
                   <ul className="space-y-2.5">
                     {items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
+                      <li key={item} className="flex items-start gap-2 text-base text-gray-700">
                         <span className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: color }} />
                         {item}
                       </li>
@@ -173,14 +175,14 @@ export default function About() {
             <div className="divider-gold w-24 mx-auto" />
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 stagger-children">
             {values.map(({ icon: Icon, title, description }) => (
-              <div key={title} className="text-center">
+              <div key={title} className="reveal text-center">
                 <div className="w-12 h-12 rounded-2xl bg-[#f6f8fa] border border-gray-200 flex items-center justify-center mx-auto mb-3">
                   <Icon size={22} className="text-[#0097B2]" />
                 </div>
                 <h3 className="text-[#111827] font-bold text-base mb-1">{title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">{description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{description}</p>
               </div>
             ))}
           </div>
@@ -189,14 +191,14 @@ export default function About() {
 
       {/* CTA */}
       <section className="py-14 bg-[#f6f8fa]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center reveal">
           <h2
             className="text-2xl font-display font-800 text-[#111827] mb-3"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
           >
             Ready to Work With Aurora Green Industries?
           </h2>
-          <p className="text-gray-500 mb-6 max-w-lg mx-auto text-sm leading-relaxed">
+          <p className="text-gray-500 mb-6 max-w-lg mx-auto text-base leading-relaxed">
             Contact our team for Atlas Copco parts, compressor service, or gas supply.
           </p>
           <Link

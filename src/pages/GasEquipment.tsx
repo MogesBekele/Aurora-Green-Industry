@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Package, Settings, Gauge } from 'lucide-react'
+import { useRevealAll } from '../hooks/useReveal'
 
 const equipment = [
   {
@@ -38,12 +39,13 @@ const equipment = [
 ]
 
 export default function GasEquipment() {
+  const pageRef = useRevealAll()
   return (
-    <div>
+    <div ref={pageRef}>
       {/* Hero */}
       <section className="bg-[#f6f8fa] py-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl reveal-left">
             <h1
               className="text-4xl sm:text-6xl font-display font-900 text-[#111827] mb-4 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
@@ -68,7 +70,7 @@ export default function GasEquipment() {
       {/* Equipment grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10">
+          <div className="reveal text-center mb-10">
             <h2
               className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
@@ -76,17 +78,17 @@ export default function GasEquipment() {
               Gas Equipment Range
             </h2>
             <div className="divider-gold w-24 mx-auto mb-3" />
-            <p className="text-gray-500 max-w-xl mx-auto text-sm">
+            <p className="text-gray-500 max-w-xl mx-auto text-base">
               Provide existing component details or application requirements for replacement orders.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 stagger-children">
             {equipment.map(({ id, icon: Icon, title, description, items }) => (
               <div
                 key={id}
                 id={`equip-${id}`}
-                className="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
+                className="reveal card-hover bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
               >
                 <div className="h-1.5 bg-[#0097B2]" />
                 <div className="p-8">
@@ -99,7 +101,7 @@ export default function GasEquipment() {
                   >
                     {title}
                   </h3>
-                  <p className="text-base text-gray-600 leading-relaxed mb-5">{description}</p>
+                  <p className="text-lg text-gray-600 leading-relaxed mb-5">{description}</p>
                   <ul className="space-y-2.5">
                     {items.map((item) => (
                       <li key={item} className="flex items-center gap-2.5 text-base font-semibold text-slate-800">
@@ -117,14 +119,14 @@ export default function GasEquipment() {
 
       {/* CTA */}
       <section className="py-14 bg-[#f6f8fa]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center reveal">
           <h2
             className="text-2xl font-display font-800 text-[#111827] mb-3"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
           >
             Ready to Request Gas Equipment?
           </h2>
-          <p className="text-gray-500 mb-7 max-w-lg mx-auto text-sm leading-relaxed">
+          <p className="text-gray-500 mb-7 max-w-lg mx-auto text-base leading-relaxed">
             Contact our team with your cylinder, valve, gauge or regulator requirements.
           </p>
           <Link

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { CheckCircle2, ExternalLink, Package, Wrench, Cpu, Zap, Filter, Droplets } from 'lucide-react'
+import { useRevealAll } from '../hooks/useReveal'
 
 const services = [
   {
@@ -77,12 +78,13 @@ const services = [
 ]
 
 export default function AtlasCopco() {
+  const pageRef = useRevealAll()
   return (
-    <div>
+    <div ref={pageRef}>
       {/* Page hero */}
       <section className="bg-[#f6f8fa] py-20 relative overflow-hidden border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl reveal-left">
             <h1
               className="text-4xl sm:text-6xl font-display font-900 text-[#111827] mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
@@ -116,7 +118,7 @@ export default function AtlasCopco() {
       {/* Services grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14">
+          <div className="reveal text-center mb-14">
             <h2
               className="text-3xl sm:text-4xl font-display font-800 text-slate-900 mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
@@ -129,12 +131,12 @@ export default function AtlasCopco() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 stagger-children">
             {services.map(({ id, icon: Icon, title, description, accent, bg }) => (
               <div
                 key={id}
                 id={`atlas-${id}`}
-                className="card-hover rounded-2xl p-7 border border-gray-100 bg-white shadow-sm flex gap-5"
+                className="reveal card-hover rounded-2xl p-7 border border-gray-100 bg-white shadow-sm flex gap-5"
               >
                 <div
                   className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0"
@@ -149,7 +151,7 @@ export default function AtlasCopco() {
                   >
                     {title}
                   </h3>
-                  <p className="text-base text-gray-600 leading-relaxed">{description}</p>
+                  <p className="text-lg text-gray-600 leading-relaxed">{description}</p>
                 </div>
               </div>
             ))}
@@ -160,14 +162,14 @@ export default function AtlasCopco() {
       {/* Parts request info */}
       <section className="py-16 bg-[#f6f8fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
+          <div className="reveal bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
             <h2
               className="text-2xl font-display font-800 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Parts & Service Request
             </h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-600 mb-6 leading-relaxed text-lg">
               To help us identify your requirement accurately, please provide the following information when contacting us:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -181,7 +183,7 @@ export default function AtlasCopco() {
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2.5">
                   <CheckCircle2 size={16} className="text-[#0097B2] shrink-0" />
-                  <span className="text-sm font-medium text-slate-700">{item}</span>
+                  <span className="text-base font-medium text-slate-700">{item}</span>
                 </div>
               ))}
             </div>
