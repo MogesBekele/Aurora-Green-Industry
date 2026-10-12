@@ -52,36 +52,37 @@ export default function Home() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 hero-gradient" />
+        {/* Transparent gradient matching Atlas Copco page: leaves compressor machinery clearly visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/20" />
         <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-[#0097B2] opacity-70" />
 
         <div className="reveal relative z-10 text-center px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
           {/* Badge */}
-          <div className="reveal inline-flex items-center gap-2.5 bg-[#0097B2]/20 border border-[#0097B2]/40 rounded-full px-5 py-2 mb-8 backdrop-blur-sm">
+          <div className="reveal inline-flex items-center gap-2.5 bg-[#0097B2]/20 border border-[#0097B2]/40 rounded-full px-5 py-2 mb-8 backdrop-blur-sm shadow-lg">
             <div className="w-2.5 h-2.5 rounded-full bg-[#0097B2] animate-pulse" />
-            <span className="text-[#e6edf3] text-sm sm:text-base font-semibold">
+            <span className="text-white text-sm sm:text-base font-bold drop-shadow-md">
               Authorised Atlas Copco Distributor
             </span>
           </div>
 
           <h1
-            className="reveal text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[5.5rem] font-display font-900 text-white leading-[1.08] mb-6 tracking-tight"
+            className="reveal text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[5.5rem] font-display font-900 text-white leading-[1.08] mb-6 tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
           >
             AURORA GREEN
             <span className="block text-[#0097B2]">INDUSTRIES PLC</span>
           </h1>
 
-          <p className="reveal text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-extrabold mb-5 tracking-tight">
-            Compressed Air & Industrial Solutions
+          <p className="reveal text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-extrabold mb-5 tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+            Compressed Air &amp; Industrial Solutions
           </p>
-          <p className="reveal text-lg sm:text-xl md:text-2xl text-gray-200 max-w-4xl lg:max-w-5xl mx-auto mb-10 font-medium leading-relaxed">
-            Authorised distributor of Atlas Copco compressors, genuine parts, maintenance, and industrial & medical gases in Ethiopia.
+          <p className="reveal text-lg sm:text-xl md:text-2xl text-white max-w-4xl lg:max-w-5xl mx-auto mb-10 font-medium leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
+            Authorised distributor of Atlas Copco compressors, genuine parts, maintenance, and industrial &amp; medical gases in Ethiopia.
           </p>
 
           <div className="reveal flex flex-wrap justify-center gap-6 sm:gap-10 lg:gap-14 mb-12">
             {['Reliable Equipment', 'Genuine Parts', 'Technical Expertise'].map((v) => (
-              <div key={v} className="flex items-center gap-3 text-white">
+              <div key={v} className="flex items-center gap-3 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
                 <CheckCircle2 size={24} className="text-[#0097B2] shrink-0" />
                 <span className="text-lg sm:text-xl font-bold">{v}</span>
               </div>

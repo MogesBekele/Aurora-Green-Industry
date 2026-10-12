@@ -2,19 +2,11 @@ import { Link } from 'react-router-dom'
 import {
   CheckCircle2,
   ExternalLink,
-  Package,
-  Wrench,
-  Cpu,
-  Zap,
-  Filter,
-  Droplets,
   Home,
   ChevronRight,
   ArrowRight,
-  Gauge,
   Award,
   Phone,
-  Clock,
 } from 'lucide-react'
 import { useRevealAll } from '../hooks/useReveal'
 
@@ -200,17 +192,17 @@ export default function AtlasCopco() {
       </section>
 
       {/* ── Product & Service Portfolio (Atlas Copco Cyan Cards with Bold Lists on Gray Background) ── */}
-      <section className="py-20 lg:py-28 bg-[#f4f6f8] border-t border-b border-gray-200">
+      <section className="py-20 lg:py-28 bg-[#edf0f2] border-t border-b border-gray-300">
         <div className="max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-14">
-          <div className="reveal text-center mb-16 max-w-2xl mx-auto">
+          <div className="reveal text-center mb-14 max-w-2xl mx-auto">
             <h2
-              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-3"
+              className="text-3xl sm:text-4xl lg:text-5xl font-display font-900 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Explore Our Portfolio
             </h2>
-            <div className="w-20 h-1 bg-[#007c92] mx-auto mb-3 rounded-full" />
-            <p className="text-gray-600 text-base font-medium">
+            <div className="w-20 h-1 bg-[#008ba4] mx-auto mb-3 rounded-full" />
+            <p className="text-gray-600 text-base font-semibold">
               Atlas Copco compressed air equipment, genuine parts, and expert service spans.
             </p>
           </div>
@@ -220,11 +212,16 @@ export default function AtlasCopco() {
               <div
                 key={id}
                 id={`service-card-${id}`}
-                className="reveal relative overflow-hidden rounded-3xl p-8 sm:p-10 shadow-xl bg-gradient-to-r from-[#008ba4] via-[#007c92] to-[#005e70] text-white flex flex-col justify-between group transition-all duration-300 hover:shadow-2xl"
+                className="reveal relative overflow-hidden rounded-3xl p-8 sm:p-10 shadow-xl bg-[#008ba4] text-white flex flex-col justify-between group transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
               >
-                {/* Atlas Copco signature geometric wave on the right */}
-                <div className="absolute right-0 top-0 bottom-0 w-2/5 bg-white/5 pointer-events-none transform -skew-x-12" />
-                <div className="absolute -bottom-10 -right-10 w-52 h-52 bg-white/5 rounded-full blur-xl pointer-events-none" />
+                {/* Atlas Copco signature angled polygon on the right */}
+                <div
+                  className="absolute right-0 top-0 bottom-0 w-2/5 pointer-events-none opacity-20"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)',
+                    clipPath: 'polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)',
+                  }}
+                />
 
                 <div className="relative z-10">
                   <h3
@@ -233,28 +230,35 @@ export default function AtlasCopco() {
                   >
                     {title}
                   </h3>
-                  <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-6 font-medium max-w-xl">
+                  <p className="text-white text-sm sm:text-base leading-relaxed mb-6 font-medium max-w-xl opacity-95">
                     {subtitle}
                   </p>
 
                   {/* Service provided list in BOLD */}
-                  <ul className="space-y-3 mb-8">
-                    {services.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-base sm:text-lg font-bold text-white">
-                        <CheckCircle2 size={20} className="text-white mt-0.5 shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="mb-8 pt-3 border-t border-white/20">
+                    <p className="text-xs uppercase tracking-wider font-black text-white/90 mb-3.5">
+                      Services &amp; Equipment Provided:
+                    </p>
+                    <ul className="space-y-3">
+                      {services.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <CheckCircle2 size={20} className="text-white mt-0.5 shrink-0" strokeWidth={2.5} />
+                          <span className="text-base sm:text-lg font-black text-white leading-snug tracking-tight">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
                 <div className="relative z-10 pt-2">
                   <Link
                     to="/contact"
-                    className="bg-white text-[#007c92] hover:bg-gray-100 font-extrabold px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2 shadow-lg transition-all transform group-hover:translate-x-1"
+                    className="bg-white text-[#00748d] hover:bg-gray-100 font-black px-7 py-3.5 rounded-full text-sm sm:text-base inline-flex items-center gap-2.5 shadow-md transition-all transform group-hover:translate-x-1"
                   >
-                    Contact our experts to learn more
-                    <ArrowRight size={16} />
+                    Contact our expert
+                    <ArrowRight size={18} strokeWidth={2.5} />
                   </Link>
                 </div>
               </div>
