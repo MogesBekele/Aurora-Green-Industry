@@ -11,12 +11,10 @@ import {
   Home,
   ChevronRight,
   ArrowRight,
-  ShieldCheck,
   Gauge,
   Award,
   Phone,
   Clock,
-  Sparkles,
 } from 'lucide-react'
 import { useRevealAll } from '../hooks/useReveal'
 
@@ -117,7 +115,7 @@ export default function AtlasCopco() {
             <ChevronRight size={14} className="text-gray-400" />
             <span className="text-gray-600 font-medium">Atlas Copco Ethiopia</span>
             <ChevronRight size={14} className="text-gray-400" />
-            <span className="text-[#007c92] font-bold">Our complete offering</span>
+            <span className="text-[#007c92] font-bold">Compressors, Parts & Service</span>
           </div>
           <div className="hidden md:flex items-center gap-3 text-xs font-semibold text-gray-500">
             <span className="inline-flex items-center gap-1.5 text-[#007c92] bg-[#007c92]/10 px-2.5 py-1 rounded-full">
@@ -129,82 +127,84 @@ export default function AtlasCopco() {
         </div>
       </div>
 
-      {/* ── Official Atlas Copco Signature Hero Banner ── */}
-      <section className="relative overflow-hidden py-20 sm:py-28 bg-gradient-to-r from-[#008ba4] via-[#007c92] to-[#005f73] text-white">
-        {/* Curved geometric swooshes matching official Atlas Copco brand style */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Ambient lighting glows */}
-          <div className="absolute -top-32 right-10 w-[600px] h-[600px] rounded-full bg-white/10 blur-3xl" />
-          <div className="absolute -bottom-40 right-1/4 w-[500px] h-[500px] rounded-full bg-[#004e5f]/40 blur-2xl" />
-
-          {/* Precision SVG swooshes reproducing Atlas Copco's wave graphics */}
-          <svg
-            className="absolute right-0 top-0 h-full w-2/3 lg:w-1/2 object-cover opacity-25"
-            viewBox="0 0 800 600"
-            fill="none"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M100 0 C300 200, 500 400, 800 600 L800 0 Z"
-              fill="url(#atlas-swoosh-1)"
-            />
-            <path
-              d="M300 0 C450 180, 600 350, 800 450 L800 0 Z"
-              fill="white"
-              opacity="0.15"
-            />
-            <circle cx="700" cy="200" r="300" fill="url(#atlas-radial)" />
-            <defs>
-              <linearGradient id="atlas-swoosh-1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.02" />
-              </linearGradient>
-              <radialGradient id="atlas-radial" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.25" />
-                <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-          </svg>
-        </div>
+      {/* ── Top Hero: Atlas Copco Compressor Section with Real Machinery & Exact Logo ── */}
+      <section
+        className="relative py-28 lg:py-36 overflow-hidden border-b border-gray-200"
+        style={{
+          backgroundImage: 'url(/hero_compressor.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'scroll',
+        }}
+      >
+        {/* Transparent gradient: leaves compressor machinery clearly visible while providing readability on left */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/20" />
 
         <div className="max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-14 relative z-10">
-          <div className="max-w-4xl reveal-left">
-            {/* Distributor Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-white">
-              <Sparkles size={15} className="text-white" />
-              <span>Official Atlas Copco Distributor • Aurora Green Industries</span>
+          <div className="max-w-3xl reveal-left">
+            {/* Atlas Copco Official Logo Card with Exact Dimension & Brand Colors */}
+            <div className="inline-flex items-center gap-4 bg-white px-7 py-4 rounded-2xl shadow-2xl mb-8 border border-white/80">
+              <img
+                src="/atlas_copco_logo.svg"
+                alt="Atlas Copco"
+                className="h-14 sm:h-16 w-auto object-contain"
+                style={{ aspectRatio: '167 / 80' }}
+              />
+              <div className="h-10 w-px bg-gray-200" />
+              <div className="text-left">
+                <span className="block text-xs font-black uppercase tracking-wider text-[#007c92]">
+                  Authorised Distributor
+                </span>
+                <span className="block text-sm font-bold text-[#111827]">
+                  Aurora Green Industries PLC
+                </span>
+              </div>
             </div>
 
             <h1
-              className="text-4xl sm:text-6xl lg:text-7xl font-display font-900 text-white mb-6 leading-[1.08] tracking-tight"
+              className="text-4xl sm:text-5xl lg:text-6xl font-display font-900 text-white mb-6 leading-tight tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
-              Our complete offering
+              Genuine Atlas Copco
+              <span className="block text-[#0097B2]">Compressors & Parts</span>
             </h1>
 
-            <p className="text-lg sm:text-xl lg:text-2xl text-white/95 leading-relaxed font-normal mb-10 max-w-3xl">
-              Industries all over Ethiopia rely on our world-leading expertise. We offer innovative compressors,
-              genuine OEM parts, air treatment systems, SMARTLINK digital monitoring, and certified maintenance
-              solutions.
+            <p className="text-lg sm:text-xl lg:text-2xl text-white leading-relaxed font-normal mb-8 max-w-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+              Factory-certified equipment, genuine OEM spare parts, and dedicated field engineering for industrial plants across Ethiopia.
             </p>
+
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm sm:text-base font-semibold text-white mb-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={20} className="text-[#0097B2] shrink-0" />
+                <span>100% Genuine OEM Parts</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={20} className="text-[#0097B2] shrink-0" />
+                <span>Factory-Trained Engineers</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={20} className="text-[#0097B2] shrink-0" />
+                <span>Nationwide Dispatch</span>
+              </div>
+            </div>
 
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 to="/contact"
-                id="atlas-hero-quote-btn"
-                className="bg-white text-[#007c92] hover:bg-gray-100 font-extrabold px-9 py-4 rounded-full text-base flex items-center gap-2.5 shadow-xl transition-all transform hover:-translate-y-0.5"
+                id="atlas-compressor-cta-quote"
+                className="btn-gold text-white font-bold px-9 py-4 rounded-full text-base sm:text-lg flex items-center gap-2.5 shadow-xl transition-all"
               >
-                Request a Quote
+                Request Parts or Service
                 <ArrowRight size={18} />
               </Link>
-              <Link
-                to="/maintenance"
-                id="atlas-hero-maint-btn"
-                className="border-2 border-white text-white hover:bg-white/15 font-bold px-8 py-4 rounded-full text-base flex items-center gap-2 backdrop-blur-sm transition-all"
+              <a
+                href="tel:+251944999966"
+                id="atlas-compressor-cta-phone"
+                className="btn-outline-white text-white font-bold px-8 py-4 rounded-full text-base sm:text-lg flex items-center gap-2.5 transition-all"
               >
-                Service & Maintenance
-                <ChevronRight size={18} />
-              </Link>
+                <Phone size={18} />
+                +251 944 999 966
+              </a>
             </div>
           </div>
         </div>
@@ -232,7 +232,7 @@ export default function AtlasCopco() {
         <div className="max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-14">
           <div className="reveal text-center mb-16 max-w-3xl mx-auto">
             <span className="text-[#007c92] font-extrabold uppercase tracking-widest text-xs sm:text-sm">
-              Certified Solutions
+              Our Complete Offering
             </span>
             <h2
               className="text-4xl sm:text-5xl lg:text-6xl font-display font-900 text-[#111827] mt-2 mb-4"
@@ -301,91 +301,8 @@ export default function AtlasCopco() {
         </div>
       </section>
 
-      {/* ── Official Parts & Service Verification Form ── */}
-      <section className="py-20 lg:py-24 bg-[#f6f8fa] border-t border-b border-gray-200">
-        <div className="max-w-[1300px] mx-auto px-4 sm:px-8">
-          <div className="reveal bg-white rounded-3xl shadow-xl border border-gray-200 p-8 sm:p-12 lg:p-16">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              <div className="lg:col-span-7">
-                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#007c92] bg-[#007c92]/10 px-3 py-1.5 rounded-full mb-4">
-                  <ShieldCheck size={16} /> Genuine OEM Verification
-                </div>
-                <h2
-                  className="text-3xl sm:text-4xl lg:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
-                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
-                >
-                  Request Atlas Copco Parts & Certified Service
-                </h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  Ensure 100% equipment reliability. Our certified technical team checks part numbers, cross-references
-                  compressor serials, and dispatches genuine service kits across Ethiopia.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                  {[
-                    'Compressor model number (GA, GX, ZT, etc.)',
-                    'Serial number plate check',
-                    'OEM Part number verification',
-                    'Air demand & flow audit request',
-                    'Preventive service plan schedule',
-                    'Emergency dispatch request',
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2.5">
-                      <CheckCircle2 size={18} className="text-[#007c92] shrink-0" />
-                      <span className="text-sm sm:text-base font-semibold text-slate-700">{item}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-wrap gap-4">
-                  <Link
-                    to="/contact"
-                    id="atlas-submit-parts-request"
-                    className="btn-gold text-white font-bold px-8 py-4 rounded-full text-base flex items-center gap-2 shadow-md"
-                  >
-                    Submit Parts Request <ArrowRight size={18} />
-                  </Link>
-                  <a
-                    href="tel:+251944999966"
-                    className="border-2 border-gray-300 text-gray-800 hover:border-[#111827] font-bold px-8 py-4 rounded-full text-base flex items-center gap-2 transition-colors"
-                  >
-                    <Phone size={18} />
-                    +251 944 999 966
-                  </a>
-                </div>
-              </div>
-
-              {/* Right Guarantee Card */}
-              <div className="lg:col-span-5 bg-gradient-to-br from-[#111827] to-[#1e293b] text-white p-8 sm:p-10 rounded-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#007c92]/20 rounded-full blur-2xl" />
-                <h3 className="text-2xl font-display font-900 mb-4" style={{ fontFamily: 'Outfit, sans-serif' }}>
-                  Why Genuine Atlas Copco Parts?
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                  Non-genuine parts cause elevated operating temperatures, oil carryover, and premature element breakdown.
-                </p>
-                <div className="space-y-4 text-sm">
-                  <div className="p-3.5 rounded-xl bg-white/5 border border-white/10">
-                    <p className="font-bold text-[#0097B2]">Guaranteed Factory Tolerances</p>
-                    <p className="text-gray-400 text-xs mt-1">Engineered to exact micron tolerances for peak energy efficiency.</p>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-white/5 border border-white/10">
-                    <p className="font-bold text-[#0097B2]">Warranty Protection</p>
-                    <p className="text-gray-400 text-xs mt-1">Maintains manufacturer warranty and preserves machine value.</p>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-white/5 border border-white/10">
-                    <p className="font-bold text-[#0097B2]">Energy & Power Savings</p>
-                    <p className="text-gray-400 text-xs mt-1">Minimal pressure drops mean lower kilowatt power consumption.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── Official Atlas Copco Ethiopia Website Banner ── */}
-      <section className="py-14 bg-white border-t border-gray-100">
+      <section className="py-14 bg-[#f6f8fa] border-t border-gray-200">
         <div className="max-w-[1500px] mx-auto px-4 sm:px-8 text-center">
           <p className="text-gray-500 text-sm mb-2 font-medium">Global Brand Credentials</p>
           <h3 className="text-xl sm:text-2xl font-bold text-[#111827] mb-4">
@@ -399,7 +316,7 @@ export default function AtlasCopco() {
             target="_blank"
             rel="noopener noreferrer"
             id="atlas-official-link"
-            className="inline-flex items-center gap-2.5 text-[#007c92] hover:text-[#005f73] font-extrabold text-base border border-[#007c92]/30 hover:border-[#007c92] px-6 py-3 rounded-full transition-all"
+            className="inline-flex items-center gap-2.5 text-[#007c92] hover:text-[#005f73] font-extrabold text-base border border-[#007c92]/30 hover:border-[#007c92] px-6 py-3 rounded-full transition-all bg-white shadow-sm"
           >
             Visit atlascopco.com/en-et
             <ExternalLink size={17} />
