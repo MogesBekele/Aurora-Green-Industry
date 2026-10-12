@@ -77,26 +77,18 @@ export default function Maintenance() {
   return (
     <div>
       {/* Hero */}
-      <section
-        className="relative py-20 overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #111827 0%, #111827 60%, #111827 100%)',
-        }}
-      >
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#0097B2] translate-x-1/2 -translate-y-1/2" />
-        </div>
+      <section className="bg-[#f6f8fa] py-20 relative overflow-hidden border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl">
 
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Maintenance &
               <span className="text-[#0097B2]"> Technical Services</span>
             </h1>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-8 font-medium">
               Aurora Green Industries PLC provides technical maintenance and service support for compressors
               and industrial equipment, from scheduled preventive maintenance to emergency troubleshooting.
             </p>
@@ -197,17 +189,17 @@ export default function Maintenance() {
       </section>
 
       {/* Service process */}
-      <section className="py-20 section-gradient-green">
+      <section className="py-20 bg-[#f6f8fa] border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-white mb-4"
+              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Service Process
             </h2>
             <div className="divider-gold w-24 mx-auto mb-4" />
-            <p className="text-gray-300 text-sm">A clear, five-step approach to every service engagement.</p>
+            <p className="text-gray-600 text-sm">A clear, five-step approach to every service engagement.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -217,8 +209,8 @@ export default function Maintenance() {
                   style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}>
                   {num}
                 </div>
-                <h3 className="text-white font-semibold text-sm mb-2">{title}</h3>
-                <p className="text-gray-300/80 text-xs leading-relaxed">{description}</p>
+                <h3 className="text-[#111827] font-semibold text-sm mb-2">{title}</h3>
+                <p className="text-gray-600 text-xs leading-relaxed">{description}</p>
               </div>
             ))}
           </div>

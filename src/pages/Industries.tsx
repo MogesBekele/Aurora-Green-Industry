@@ -27,7 +27,7 @@ const industries = [
     icon: Hammer,
     title: 'Welding & Metal Fabrication',
     color: '#0097B2',
-    bg: '#1f2937',
+    bg: '#f6f8fa',
     description:
       'Oxygen, acetylene, argon, carbon dioxide, cylinders, cylinder valves, pressure gauges, regulators and related equipment for welding and fabrication operations.',
     solutions: ['Oxygen', 'Acetylene', 'Argon shielding gas', 'CO₂', 'Cylinders & valves', 'Regulators & gauges'],
@@ -88,18 +88,18 @@ export default function Industries() {
   return (
     <div>
       {/* Hero */}
-      <section className="section-gradient-green py-20">
+      <section className="bg-[#f6f8fa] py-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
 
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Industrial Solutions for
               <span className="text-[#0097B2]"> Ethiopia's Industries</span>
             </h1>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-600 text-lg leading-relaxed font-medium">
               Different industries have different equipment, gas and maintenance requirements. Aurora Green Industries
               provides compressed-air solutions, genuine Atlas Copco parts, maintenance and technical services,
               industrial and medical gases, cylinders and gas equipment.

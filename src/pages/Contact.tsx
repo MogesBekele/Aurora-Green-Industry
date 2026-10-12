@@ -1,13 +1,5 @@
 import { useState } from 'react'
-import { Phone, Mail, MapPin, ArrowRight, CheckCircle2, Package, Wrench, Flame, Settings, AlertCircle } from 'lucide-react'
-
-const quickActions = [
-  { id: 'qa-quote', icon: ArrowRight, label: 'Request a Quote', subject: 'Request a Quote' },
-  { id: 'qa-parts', icon: Package, label: 'Request Genuine Parts', subject: 'Genuine Parts Request' },
-  { id: 'qa-service', icon: Wrench, label: 'Request Compressor Service', subject: 'Compressor Service Request' },
-  { id: 'qa-gas', icon: Flame, label: 'Request Gas Supply', subject: 'Gas Supply Request' },
-  { id: 'qa-equipment', icon: Settings, label: 'Request Gas Equipment', subject: 'Gas Equipment Request' },
-]
+import { Phone, Mail, MapPin, ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react'
 
 const serviceOptions = [
   'Genuine Atlas Copco Parts',
@@ -98,26 +90,20 @@ export default function Contact() {
     `Name: ${form.name}\nCompany: ${form.company || 'N/A'}\nPhone: ${form.phone || 'N/A'}\nEmail: ${form.email}\nService Requested: ${form.service || 'N/A'}\nEquipment Serial/Model: ${form.serial || 'N/A'}\n\nMessage:\n${form.message}`
   )}`
 
-  const setSubject = (subject: string) => {
-    setForm((f) => ({ ...f, service: subject }))
-    const el = document.getElementById('contact-form')
-    el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
-
   return (
     <div>
       {/* Hero */}
-      <section className="section-gradient-green py-20">
+      <section className="bg-[#f6f8fa] py-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Let's Discuss
               <span className="text-[#0097B2]"> Your Requirement</span>
             </h1>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-600 text-lg leading-relaxed font-medium">
               Whether you need an Atlas Copco part, compressor service, industrial gas, cylinder, valve,
               pressure gauge or another industrial solution, contact Aurora Green Industries PLC.
             </p>
@@ -125,25 +111,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Quick action buttons */}
-      <section className="py-10 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-5">Quick Contact</p>
-          <div className="flex flex-wrap gap-3">
-            {quickActions.map(({ id, icon: Icon, label, subject }) => (
-              <button
-                key={id}
-                id={id}
-                onClick={() => setSubject(subject)}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-full border-2 border-[#111827] text-[#111827] text-sm font-semibold hover:bg-[#111827] hover:text-white transition-all"
-              >
-                <Icon size={14} />
-                {label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Main contact section */}
       <section className="py-20 bg-[#f6f8fa]">

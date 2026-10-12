@@ -129,21 +129,16 @@ body {
 }
 
 .hero-gradient {
-  background: linear-gradient(
-    135deg,
-    rgba(13, 17, 23, 0.92) 0%,
-    rgba(33, 38, 45, 0.80) 50%,
-    rgba(0, 0, 0, 0.75) 100%
-  );
+  background: rgba(17, 24, 39, 0.85);
 }
 
-/* Section gradients */
+/* Section backgrounds */
 .section-gradient-green {
-  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #000000 100%);
+  background: #f6f8fa;
 }
 
 .section-gradient-dark {
-  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  background: #f6f8fa;
 }
 
 /* Card hover effect */
@@ -217,13 +212,13 @@ body {
 /* Divider */
 .divider-gold {
   height: 3px;
-  background: linear-gradient(90deg, transparent, #0097B2, transparent);
+  background: #0097B2;
 }
 
 /* Stats counter */
 .stat-card {
-  background: linear-gradient(135deg, rgba(22,27,34,0.08), rgba(48,54,61,0.05));
-  border: 1px solid rgba(22,27,34,0.12);
+  background: #f6f8fa;
+  border: 1px solid rgba(22, 27, 34, 0.12);
 }
 
 /* Service process step */
@@ -238,7 +233,7 @@ body {
   top: 50%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #30363d, transparent);
+  background: #30363d;
 }
 
 /* Industry card */
@@ -257,7 +252,7 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #30363d, #0097B2);
+  background: #0097B2;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }

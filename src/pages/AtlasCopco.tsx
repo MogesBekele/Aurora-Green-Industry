@@ -80,19 +80,17 @@ export default function AtlasCopco() {
   return (
     <div>
       {/* Page hero */}
-      <section className="bg-slate-900 py-20 relative overflow-hidden">
-        {/* Subtle background overlay to match the metallic/dark blue feel */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-700/40 via-slate-900 to-black pointer-events-none" />
+      <section className="bg-[#f6f8fa] py-20 relative overflow-hidden border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl">
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Atlas Copco Compressor
-              <span className="text-gray-300"> Service & Optimization</span>
+              <span className="text-[#0097B2]"> Service & Optimization</span>
             </h1>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8 font-medium">
+            <p className="text-gray-600 text-lg leading-relaxed mb-8 font-medium">
               Aurora Green Industries PLC is an Authorised Distributor for Atlas Copco branded products.
               We provide Compressor Service and Optimization (CSO) solutions covering genuine parts, maintenance,
               digital services and compressed-air optimization.
@@ -101,14 +99,14 @@ export default function AtlasCopco() {
               <Link
                 to="/contact"
                 id="atlas-cta-parts"
-                className="bg-[#0097B2] text-white hover:bg-[#007b91] transition-colors font-bold px-7 py-3.5 rounded text-sm flex items-center gap-2 shadow-lg"
+                className="bg-[#0097B2] text-white hover:bg-[#007b91] transition-colors font-bold px-7 py-3.5 rounded text-sm flex items-center gap-2 shadow-sm"
               >
                 Request Genuine Parts
               </Link>
               <Link
                 to="/contact"
                 id="atlas-cta-service"
-                className="bg-[#0097B2] text-white hover:bg-[#007b91] transition-colors font-bold px-7 py-3.5 rounded text-sm flex items-center gap-2 shadow-lg"
+                className="bg-[#111827] text-white hover:bg-[#30363d] transition-colors font-bold px-7 py-3.5 rounded text-sm flex items-center gap-2 shadow-sm"
               >
                 Request Compressor Service
               </Link>

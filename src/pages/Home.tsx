@@ -4,9 +4,6 @@ import {
   CheckCircle2,
   ChevronRight,
   Settings,
-  Flame,
-  Wrench,
-  Package,
   Zap,
   Shield,
   Activity,
@@ -66,8 +63,6 @@ const industries = [
 export default function Home() {
   const heroRef = useReveal()
   const atlasRef = useReveal()
-  const maintenanceRef = useReveal()
-  const gasRef = useReveal()
 
   return (
     <div>
@@ -83,7 +78,7 @@ export default function Home() {
         <div className="absolute inset-0 hero-gradient" />
 
         {/* Decorative green glow */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#0097B2] to-transparent opacity-60" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#0097B2] opacity-60" />
 
         <div
           ref={heroRef}
@@ -150,7 +145,7 @@ export default function Home() {
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
           <span className="text-gray-400 text-xs">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-gray-400 to-transparent" />
+          <div className="w-px h-8 bg-gray-400" />
         </div>
       </section>
 
@@ -202,7 +197,7 @@ export default function Home() {
                   alt="Industrial compressors"
                   className="w-full h-80 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/60 to-transparent" />
+                <div className="absolute inset-0 bg-black/30" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
                     <p className="text-white text-sm font-semibold mb-1">Authorised Distributor</p>
@@ -227,107 +222,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Three Pillars Section ── */}
-      <section className="py-24 bg-[#f6f8fa]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14">
-            <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
-              style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
-            >
-              Our Core Services
-            </h2>
-            <div className="divider-gold w-24 mx-auto mb-4" />
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Industrial solutions spanning compressed air, gases, and technical service — all from a single trusted partner.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Maintenance */}
-            <div ref={maintenanceRef} className="reveal card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-              <div className="h-2 bg-gradient-to-r from-[#111827] to-[#0097B2]" />
-              <div className="p-8">
-                <div className="w-14 h-14 rounded-2xl bg-[#f6f8fa] flex items-center justify-center mb-5">
-                  <Wrench size={26} className="text-[#111827]" />
-                </div>
-                <h3
-                  className="text-xl font-display font-700 text-[#111827] mb-3"
-                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
-                >
-                  Maintenance & Technical Services
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Aurora Green Industries provides compressor maintenance and technical support, including
-                  preventive maintenance, minor and major service, troubleshooting, equipment inspection
-                  and applicable industrial maintenance services.
-                </p>
-                <Link
-                  to="/contact"
-                  id="home-maintenance-cta"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#111827] hover:text-[#007b91] transition-colors"
-                >
-                  Request Service <ChevronRight size={14} />
-                </Link>
-              </div>
-            </div>
-
-            {/* Gases */}
-            <div ref={gasRef} className="reveal card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 animate-delay-200">
-              <div className="h-2 bg-gradient-to-r from-[#0097B2] to-[#0097B2]" />
-              <div className="p-8">
-                <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-5">
-                  <Flame size={26} className="text-[#0097B2]" />
-                </div>
-                <h3
-                  className="text-xl font-display font-700 text-[#111827] mb-3"
-                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
-                >
-                  Industrial & Medical Gases
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Our gas business supplies oxygen, nitrogen, argon, carbon dioxide and acetylene
-                  for healthcare, manufacturing, welding, fabrication and other industrial applications.
-                </p>
-                <Link
-                  to="/gases"
-                  id="home-gases-cta"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0097B2] hover:text-[#111827] transition-colors"
-                >
-                  Explore Gas Solutions <ChevronRight size={14} />
-                </Link>
-              </div>
-            </div>
-
-            {/* Gas Equipment */}
-            <div className="reveal card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 animate-delay-400">
-              <div className="h-2 bg-gradient-to-r from-[#30363d] to-[#484f58]" />
-              <div className="p-8">
-                <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-5">
-                  <Package size={26} className="text-[#30363d]" />
-                </div>
-                <h3
-                  className="text-xl font-display font-700 text-[#111827] mb-3"
-                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
-                >
-                  Gas Equipment
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  We supply gas cylinders and related components including cylinder valves, pressure
-                  gauges, regulators, fittings and accessories for compressed-gas applications.
-                </p>
-                <Link
-                  to="/contact"
-                  id="home-gasequip-cta"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-700 hover:text-[#111827] transition-colors"
-                >
-                  Contact Us <ChevronRight size={14} />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── Gas Visual Section ── */}
       <section className="py-24 bg-white">
@@ -383,17 +277,17 @@ export default function Home() {
       </section>
 
       {/* ── Industries Grid ── */}
-      <section className="py-24 section-gradient-green">
+      <section className="py-24 bg-[#f6f8fa] border-t border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-white mb-4"
+              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Industries We Serve
             </h2>
             <div className="divider-gold w-24 mx-auto mb-4" />
-            <p className="text-gray-300 max-w-xl mx-auto text-sm">
+            <p className="text-gray-600 max-w-xl mx-auto text-sm font-medium">
               Providing compressed-air solutions, Atlas Copco parts, maintenance, gases and gas equipment
               across Ethiopia's industrial sectors.
             </p>
@@ -404,12 +298,12 @@ export default function Home() {
               <Link
                 key={label}
                 to="/industries"
-                className="industry-card rounded-xl p-5 text-center group"
+                className="industry-card rounded-xl p-5 text-center group bg-white shadow-sm border border-gray-200"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#f6f8fa] flex items-center justify-center mx-auto mb-3 group-hover:bg-[#111827] transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-[#f6f8fa] flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0097B2] transition-colors">
                   <Icon size={22} className="text-[#111827] group-hover:text-white transition-colors" />
                 </div>
-                <p className="text-sm font-semibold text-gray-800 group-hover:text-[#111827] transition-colors">
+                <p className="text-sm font-semibold text-gray-800 group-hover:text-[#0097B2] transition-colors">
                   {label}
                 </p>
               </Link>
@@ -419,19 +313,15 @@ export default function Home() {
       </section>
 
       {/* ── Closing CTA ── */}
-      <section className="py-24 bg-[#111827] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-[#0097B2] -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-[#0097B2] translate-x-1/2 translate-y-1/2" />
-        </div>
+      <section className="py-24 bg-white relative overflow-hidden border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <h2
-            className="text-3xl sm:text-4xl font-display font-800 text-white mb-5"
+            className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-5"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
           >
             Need a Compressor, Part, Service or Industrial Gas?
           </h2>
-          <p className="text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
             Tell us what you need. Our team will help you identify the appropriate product or service
             for your equipment and application.
           </p>
@@ -439,14 +329,14 @@ export default function Home() {
             <Link
               to="/contact"
               id="closing-cta-contact"
-              className="btn-gold text-white font-semibold px-8 py-4 rounded-full text-sm flex items-center gap-2 justify-center"
+              className="btn-gold text-white font-semibold px-8 py-4 rounded-full text-sm flex items-center gap-2 justify-center shadow-sm"
             >
               Contact Aurora Green Industries
               <ArrowRight size={16} />
             </Link>
             <a
               href="tel:+251944999966"
-              className="btn-outline-white text-white font-semibold px-8 py-4 rounded-full text-sm flex items-center gap-2 justify-center"
+              className="border-2 border-gray-300 text-gray-800 hover:border-[#111827] hover:text-[#111827] transition-all font-semibold px-8 py-4 rounded-full text-sm flex items-center gap-2 justify-center"
             >
               <Phone size={16} />
               +251 944 999 966

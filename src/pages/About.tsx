@@ -55,25 +55,18 @@ export default function About() {
   return (
     <div>
       {/* Hero */}
-      <section
-        className="py-24 relative overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #111827, #111827, #161b22)' }}
-      >
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#0097B2] translate-x-1/3 -translate-y-1/3" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#0097B2] -translate-x-1/3 translate-y-1/3" />
-        </div>
+      <section className="py-24 relative overflow-hidden bg-[#f6f8fa] border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl">
 
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Building Reliable Industrial
               <span className="text-[#0097B2]"> Solutions for Ethiopia</span>
             </h1>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-600 text-lg leading-relaxed font-medium">
               Aurora Green Industries PLC (AGI) is an Ethiopian industrial solutions company providing compressed-air
               equipment, genuine spare parts, maintenance and technical services, industrial and medical gases,
               cylinders and gas-handling equipment.
@@ -189,11 +182,11 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-20 section-gradient-green">
+      <section className="py-20 bg-[#f6f8fa] border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-white mb-4"
+              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Our Values
@@ -204,11 +197,11 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {values.map(({ icon: Icon, title, description }) => (
               <div key={title} className="text-center">
-                <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 rounded-2xl bg-white border border-gray-200 shadow-sm flex items-center justify-center mx-auto mb-4">
                   <Icon size={24} className="text-[#0097B2]" />
                 </div>
-                <h3 className="text-white font-semibold mb-2">{title}</h3>
-                <p className="text-gray-300/70 text-xs leading-relaxed">{description}</p>
+                <h3 className="text-[#111827] font-semibold mb-2">{title}</h3>
+                <p className="text-gray-600 text-xs leading-relaxed">{description}</p>
               </div>
             ))}
           </div>

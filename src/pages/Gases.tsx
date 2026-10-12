@@ -17,7 +17,7 @@ const gases = [
     title: 'Industrial Oxygen',
     icon: Flame,
     color: '#0097B2',
-    bg: '#1f2937',
+    bg: '#f6f8fa',
     description:
       'Industrial oxygen is used in welding, metal fabrication, cutting and other industrial processes. Supplied in cylinders according to customer requirements.',
     applications: ['Metal cutting', 'Welding', 'Fabrication', 'Industrial processes'],
@@ -57,7 +57,7 @@ const gases = [
     title: 'Acetylene',
     icon: Flame,
     color: '#0097B2',
-    bg: '#1f2937',
+    bg: '#f6f8fa',
     description:
       'Acetylene is used in gas welding, cutting and other high-temperature industrial applications. Aurora Green Industries supplies acetylene for welding and fabrication requirements.',
     applications: ['Oxy-acetylene welding', 'Metal cutting', 'Brazing', 'High-temp applications'],
@@ -68,18 +68,18 @@ export default function Gases() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#1f2937] via-[#0097B2] to-[#1f2937] py-20">
+      <section className="bg-[#f6f8fa] py-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
 
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Industrial & Medical
-              <span className="block text-yellow-200">Gases in Ethiopia</span>
+              <span className="block text-[#0097B2]">Gases in Ethiopia</span>
             </h1>
-            <p className="text-yellow-100/90 text-lg leading-relaxed mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-8 font-medium">
               Aurora Green Industries PLC supplies industrial and medical gases for healthcare, manufacturing,
               welding and fabrication, laboratories, construction and other industrial applications. Our gas
               portfolio includes oxygen, nitrogen, argon, carbon dioxide and acetylene.
@@ -87,7 +87,7 @@ export default function Gases() {
             <Link
               to="/contact"
               id="gases-hero-cta"
-              className="bg-white text-[#1f2937] font-semibold px-6 py-3 rounded-full text-sm inline-flex items-center gap-2 hover:bg-yellow-50 transition-colors"
+              className="bg-[#0097B2] text-white hover:bg-[#007b91] font-semibold px-6 py-3 rounded-full text-sm inline-flex items-center gap-2 transition-colors shadow-sm"
             >
               Request Gas Supply <ArrowRight size={15} />
             </Link>
@@ -118,7 +118,7 @@ export default function Gases() {
                 id={`gas-${id}`}
                 className="card-hover rounded-2xl border border-gray-100 overflow-hidden shadow-sm"
               >
-                <div className="h-1.5" style={{ background: `linear-gradient(90deg, ${color}, ${color}88)` }} />
+                <div className="h-1.5" style={{ backgroundColor: color }} />
                 <div className="p-7">
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
@@ -153,21 +153,21 @@ export default function Gases() {
       {/* CTA */}
       <section className="py-16 bg-[#f6f8fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-gradient-to-br from-[#1f2937] to-[#0097B2] rounded-2xl p-10 text-center text-white">
+          <div className="bg-white border border-gray-200 shadow-sm rounded-2xl p-10 text-center">
             <h2
-              className="text-2xl font-display font-800 mb-4"
+              className="text-2xl font-display font-800 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Gas Supply Request
             </h2>
-            <p className="text-yellow-100/90 mb-6 leading-relaxed max-w-xl mx-auto text-sm">
+            <p className="text-gray-600 mb-6 leading-relaxed max-w-xl mx-auto text-sm">
               Contact us with the gas required, quantity, cylinder size, delivery location and required frequency.
               Our team will confirm availability and arrange supply.
             </p>
             <Link
               to="/contact"
               id="gases-supply-cta"
-              className="bg-white text-[#1f2937] font-semibold px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2 hover:bg-yellow-50 transition-colors"
+              className="bg-[#0097B2] text-white hover:bg-[#007b91] font-semibold px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2 transition-colors shadow-sm"
             >
               Request Gas Supply <ArrowRight size={15} />
             </Link>

@@ -47,18 +47,18 @@ export default function GasEquipment() {
   return (
     <div>
       {/* Hero */}
-      <section className="section-gradient-dark py-20">
+      <section className="bg-[#f6f8fa] py-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
 
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-white mb-5 leading-tight"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Gas Cylinders, Valves
               <span className="text-[#0097B2]"> & Pressure Gauges</span>
             </h1>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-8 font-medium">
               Aurora Green Industries supplies gas cylinders and related components including cylinder valves,
               pressure gauges, regulators, fittings and accessories for compressed-gas applications.
             </p>
@@ -96,7 +96,7 @@ export default function GasEquipment() {
                 id={`equip-${id}`}
                 className="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
               >
-                <div className="h-1.5 bg-gradient-to-r from-[#111827] to-[#0097B2]" />
+                <div className="h-1.5 bg-[#0097B2]" />
                 <div className="p-8">
                   <div className="w-14 h-14 rounded-2xl bg-[#f6f8fa] flex items-center justify-center mb-5">
                     <Icon size={26} className="text-[#111827]" />
