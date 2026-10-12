@@ -119,8 +119,8 @@ export default function Contact() {
             <div className="lg:col-span-1 space-y-6">
               <div>
                 <h2
-                  className="text-3xl font-display font-800 text-[#111827] mb-6"
-                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+                  className="text-3xl sm:text-4xl font-display font-900 text-[#111827] mb-6"
+                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
                 >
                   Contact Information
                 </h2>
@@ -168,7 +168,7 @@ export default function Contact() {
 
               {/* Info box */}
               <div className="bg-[#111827] rounded-2xl p-6 text-white">
-                <h3 className="font-semibold mb-3 text-[#0097B2]">What to Include</h3>
+                <h3 className="text-xl font-bold mb-3 text-[#0097B2]">What to Include</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
                   {[
                     'Product or service required',
@@ -223,8 +223,8 @@ export default function Contact() {
                     <input type="text" name="_honey" className="hidden" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
                     <h2
-                      className="text-2xl font-display font-800 text-[#111827] mb-1"
-                      style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+                      className="text-3xl font-display font-900 text-[#111827] mb-2"
+                      style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
                     >
                       Send Us a Message
                     </h2>

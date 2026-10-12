@@ -72,7 +72,7 @@ export default function GasEquipment() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="reveal text-center mb-10">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-3"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Gas Equipment Range
@@ -96,7 +96,7 @@ export default function GasEquipment() {
                     <Icon size={26} className="text-[#111827]" />
                   </div>
                   <h3
-                    className="text-xl font-display font-800 text-[#111827] mb-2"
+                    className="text-2xl font-display font-900 text-[#111827] mb-2"
                     style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                   >
                     {title}
@@ -121,7 +121,7 @@ export default function GasEquipment() {
       <section className="py-14 bg-[#f6f8fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center reveal">
           <h2
-            className="text-2xl font-display font-800 text-[#111827] mb-3"
+            className="text-3xl font-display font-900 text-[#111827] mb-3"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
           >
             Ready to Request Gas Equipment?

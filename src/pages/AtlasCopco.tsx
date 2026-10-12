@@ -120,7 +120,7 @@ export default function AtlasCopco() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="reveal text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-slate-900 mb-4"
+              className="text-4xl sm:text-5xl font-display font-900 text-slate-900 mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               CSO Product & Service Spans
@@ -146,7 +146,7 @@ export default function AtlasCopco() {
                 </div>
                 <div>
                   <h3
-                    className="text-xl font-display font-800 text-[#111827] mb-2"
+                    className="text-2xl font-display font-900 text-[#111827] mb-2"
                     style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                   >
                     {title}
@@ -164,7 +164,7 @@ export default function AtlasCopco() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="reveal bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
             <h2
-              className="text-2xl font-display font-800 text-[#111827] mb-4"
+              className="text-3xl font-display font-900 text-[#111827] mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Parts & Service Request

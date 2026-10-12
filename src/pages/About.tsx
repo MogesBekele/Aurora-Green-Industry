@@ -72,8 +72,8 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             <div className="reveal-left">
               <h2
-                className="text-3xl font-display font-800 text-[#111827] mb-5"
-                style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+                className="text-3xl sm:text-4xl font-display font-900 text-[#111827] mb-5"
+                style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
               >
                 Our Approach
               </h2>
@@ -86,16 +86,16 @@ export default function About() {
 
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold text-[#111827] mb-1 flex items-center gap-2">
+                  <h3 className="font-bold text-[#111827] text-lg mb-1 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#0097B2]" />
                     Our Vision
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed pl-4">
+                  <p className="text-gray-600 text-base leading-relaxed pl-4">
                     To become a trusted industrial solutions partner across Ethiopia.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#111827] mb-1 flex items-center gap-2">
+                  <h3 className="font-bold text-[#111827] text-lg mb-1 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#0097B2]" />
                     Our Mission
                   </h3>
@@ -128,8 +128,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-3"
-              style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-3"
+              style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Our Business
             </h2>
@@ -142,8 +142,8 @@ export default function About() {
                 <div className="h-1.5" style={{ background: color }} />
                 <div className="p-6">
                   <h3
-                    className="text-lg font-display font-700 text-[#111827] mb-4"
-                    style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
+                    className="text-xl sm:text-2xl font-display font-900 text-[#111827] mb-4"
+                    style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
                   >
                     {title}
                   </h3>
@@ -167,7 +167,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
             <h2
-              className="text-3xl sm:text-4xl font-display font-900 text-[#111827] mb-3"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Our Core Values
@@ -181,7 +181,7 @@ export default function About() {
                 <div className="w-12 h-12 rounded-2xl bg-[#f6f8fa] border border-gray-200 flex items-center justify-center mx-auto mb-3">
                   <Icon size={22} className="text-[#0097B2]" />
                 </div>
-                <h3 className="text-[#111827] font-bold text-base mb-1">{title}</h3>
+                <h3 className="text-[#111827] font-bold text-lg mb-1">{title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{description}</p>
               </div>
             ))}
@@ -193,8 +193,8 @@ export default function About() {
       <section className="py-14 bg-[#f6f8fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center reveal">
           <h2
-            className="text-2xl font-display font-800 text-[#111827] mb-3"
-            style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+            className="text-3xl sm:text-4xl font-display font-900 text-[#111827] mb-3"
+            style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
           >
             Ready to Work With Aurora Green Industries?
           </h2>

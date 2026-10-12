@@ -101,7 +101,7 @@ export default function Maintenance() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             <div className="reveal-left">
               <h2
-                className="text-3xl font-display font-800 text-[#111827] mb-4"
+                className="text-4xl font-display font-900 text-[#111827] mb-4"
                 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
               >
                 Compressor Maintenance
@@ -125,8 +125,8 @@ export default function Maintenance() {
                     <Icon size={18} className="text-[#111827]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#111827] text-sm mb-1">{title}</h3>
-                    <p className="text-xs text-gray-500 leading-relaxed">{description}</p>
+                    <h3 className="font-bold text-[#111827] text-lg mb-1">{title}</h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
                   </div>
                 </div>
               ))}
@@ -140,7 +140,7 @@ export default function Maintenance() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-3"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Service Capabilities
@@ -159,7 +159,7 @@ export default function Maintenance() {
                   <Icon size={22} className="text-[#111827]" />
                 </div>
                 <h3
-                  className="text-xl font-display font-800 text-[#111827] mb-2"
+                  className="text-2xl font-display font-900 text-[#111827] mb-2"
                   style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                 >
                   {title}
@@ -184,7 +184,7 @@ export default function Maintenance() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
             <h2
-              className="text-3xl sm:text-4xl font-display font-900 text-[#111827] mb-3"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Service Process
@@ -200,7 +200,7 @@ export default function Maintenance() {
                   style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}>
                   {num}
                 </div>
-                <h3 className="text-[#111827] font-bold text-base mb-1.5">{title}</h3>
+                <h3 className="text-[#111827] font-bold text-lg mb-1.5">{title}</h3>
                 <p className="text-gray-600 text-base leading-relaxed">{description}</p>
               </div>
             ))}

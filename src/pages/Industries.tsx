@@ -117,8 +117,8 @@ export default function Industries() {
                     <Icon size={30} style={{ color }} />
                   </div>
                   <h3
-                    className="text-2xl sm:text-3xl font-display font-800 text-[#111827]"
-                    style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+                    className="text-2xl sm:text-3xl font-display font-900 text-[#111827]"
+                    style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
                   >
                     {title}
                   </h3>
@@ -133,8 +133,8 @@ export default function Industries() {
       <section className="py-14 bg-[#f6f8fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center reveal">
           <h2
-            className="text-2xl font-display font-800 text-[#111827] mb-3"
-            style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+            className="text-3xl sm:text-4xl font-display font-900 text-[#111827] mb-3"
+            style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
           >
             Don't See Your Industry?
           </h2>

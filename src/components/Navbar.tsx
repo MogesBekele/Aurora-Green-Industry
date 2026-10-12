@@ -57,7 +57,7 @@ export default function Navbar() {
               <img
                 src="/agi_logo_new.png"
                 alt="Aurora Green Industries PLC"
-                className="h-16 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
             </Link>
 
@@ -69,7 +69,7 @@ export default function Navbar() {
                     <button
                       onMouseEnter={() => setGasOpen(true)}
                       onMouseLeave={() => setGasOpen(false)}
-                      className={`nav-link flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                      className={`nav-link flex items-center gap-1 px-4 py-2 text-base font-bold rounded-md transition-colors ${
                         isActive(item.path)
                           ? 'text-[#111827] active'
                           : 'text-gray-700 hover:text-[#111827]'
@@ -95,7 +95,7 @@ export default function Navbar() {
                           <Link
                             key={child.path}
                             to={child.path}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f6f8fa] hover:text-[#111827] transition-colors border-b border-gray-50 last:border-0"
+                            className="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-[#f6f8fa] hover:text-[#111827] transition-colors border-b border-gray-50 last:border-0"
                           >
                             {child.label}
                           </Link>
@@ -107,7 +107,7 @@ export default function Navbar() {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`nav-link px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    className={`nav-link px-4 py-2 text-base font-bold rounded-md transition-colors ${
                       isActive(item.path)
                         ? 'text-[#111827] active'
                         : 'text-gray-700 hover:text-[#111827]'
@@ -120,7 +120,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 id="nav-cta-contact"
-                className="ml-3 btn-gold text-white text-sm font-semibold px-5 py-2.5 rounded-full"
+                className="ml-4 btn-gold text-white text-base font-bold px-6 py-3 rounded-full"
               >
                 Request a Quote
               </Link>
@@ -162,7 +162,7 @@ export default function Navbar() {
                       <Link
                         key={child.path}
                         to={child.path}
-                        className="block px-6 py-2.5 text-sm text-gray-700 hover:text-[#111827] hover:bg-gray-100 rounded-lg transition-colors"
+                        className="block px-5 py-3 text-base font-medium text-gray-700 hover:text-[#111827] hover:bg-gray-100 rounded-lg transition-colors"
                       >
                         {child.label}
                       </Link>
@@ -172,7 +172,7 @@ export default function Navbar() {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`block px-3 py-2.5 text-sm font-medium rounded-lg transition-colors ${
+                    className={`block px-3 py-3 text-base font-bold rounded-lg transition-colors ${
                       isActive(item.path)
                         ? 'text-[#111827] bg-gray-100'
                         : 'text-gray-700 hover:text-[#111827] hover:bg-gray-100'
@@ -185,7 +185,7 @@ export default function Navbar() {
               <div className="mt-4 pt-3 border-t border-gray-100">
                 <Link
                   to="/contact"
-                  className="block w-full text-center btn-gold text-white font-semibold py-3 rounded-full text-sm"
+                  className="block w-full text-center btn-gold text-white font-bold py-3.5 rounded-full text-base"
                 >
                   Request a Quote
                 </Link>

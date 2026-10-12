@@ -93,7 +93,7 @@ export default function Gases() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="reveal text-center mb-10">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-3"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Our Gas Products
@@ -120,7 +120,7 @@ export default function Gases() {
                     <Icon size={22} style={{ color }} />
                   </div>
                   <h3
-                    className="text-xl font-display font-800 text-[#111827] mb-2"
+                    className="text-2xl font-display font-900 text-[#111827] mb-2"
                     style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                   >
                     {title}
@@ -148,7 +148,7 @@ export default function Gases() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="reveal bg-white border border-gray-200 shadow-sm rounded-2xl p-8 text-center">
             <h2
-              className="text-2xl font-display font-800 text-[#111827] mb-3"
+              className="text-3xl font-display font-900 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Gas Supply Request
