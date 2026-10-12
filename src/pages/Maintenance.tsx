@@ -6,49 +6,43 @@ const serviceTypes = [
     id: 'minor-service',
     icon: Wrench,
     title: 'Minor Compressor Service',
-    description:
-      'Routine scheduled maintenance and replacement of applicable service components, followed by operational checks.',
-    items: ['Filter replacement', 'Oil change', 'Belt inspection', 'Operational checks', 'Service records'],
+    description: 'Routine oil & filter changes, valve checks, and performance calibration.',
+    items: ['Filter & oil replacement', 'Belt & tension inspection', 'Operating parameter checks'],
   },
   {
     id: 'major-service',
     icon: Settings,
-    title: 'Major Compressor Service',
-    description:
-      'More extensive scheduled maintenance, inspection, component replacement, reassembly and operational checks according to the specific compressor and service requirement.',
-    items: ['Full disassembly & inspection', 'Component replacement', 'Seal & valve replacement', 'Reassembly & alignment', 'Operational testing'],
+    title: 'Major Compressor Overhaul',
+    description: 'Full element teardown, seal replacements, and load validation testing.',
+    items: ['Full element teardown', 'Bearings & seals renewal', 'Operational load testing'],
   },
   {
     id: 'preventive',
     icon: ClipboardList,
-    title: 'Preventive Maintenance',
-    description:
-      'Maintenance scheduling, service-interval planning, routine inspection, scheduled component replacement and maintenance records.',
-    items: ['Maintenance scheduling', 'Service-interval planning', 'Routine inspection', 'Component tracking', 'Maintenance records'],
+    title: 'Preventive Service Plans',
+    description: 'Scheduled contracts tailored to operating hours to prevent breakdowns.',
+    items: ['Fixed maintenance intervals', 'Genuine parts budgeting', 'Dedicated technician support'],
   },
   {
     id: 'troubleshooting',
     icon: AlertTriangle,
-    title: 'Troubleshooting & Technical Support',
-    description:
-      'Initial assessment, equipment inspection, troubleshooting, component identification, parts identification and maintenance recommendations.',
-    items: ['Initial assessment', 'Equipment inspection', 'Fault diagnosis', 'Parts identification', 'Maintenance recommendations'],
+    title: 'Emergency Troubleshooting',
+    description: 'Rapid fault isolation, on-site repairs, and urgent genuine parts sourcing.',
+    items: ['Immediate fault isolation', 'Pressure drop diagnostics', 'Rapid parts supply'],
   },
   {
     id: 'industrial-maintenance',
     icon: Gauge,
-    title: 'Industrial Equipment Maintenance',
-    description:
-      'Applicable industrial equipment maintenance, equipment inspection, installation support, commissioning support, troubleshooting and component replacement.',
-    items: ['Equipment inspection', 'Installation support', 'Commissioning', 'Troubleshooting', 'Component replacement'],
+    title: 'Industrial Plant Maintenance',
+    description: 'Installation, piping commissioning, and preventative servicing of utility assets.',
+    items: ['Equipment installation', 'Piping leak audits', 'Plant commissioning'],
   },
   {
     id: 'gas-support',
     icon: Settings,
-    title: 'Gas & Oxygen Equipment Support',
-    description:
-      'Technical support including gas equipment maintenance, oxygen plant equipment support, cylinder filling equipment, gas manifold equipment, gas valves and components.',
-    items: ['Gas equipment maintenance', 'Oxygen plant support', 'Cylinder filling equipment', 'Gas manifold equipment', 'Gas valve components'],
+    title: 'Gas & Oxygen Plant Support',
+    description: 'Technical service for manifold panels, pressure reduction stations, and cylinders.',
+    items: ['Manifold maintenance', 'Oxygen plant support', 'Regulator calibration'],
   },
 ]
 
@@ -57,20 +51,18 @@ const serviceItems = [
   'Minor compressor service',
   'Major compressor service',
   'Scheduled maintenance',
-  'Inspection and condition assessment',
-  'Troubleshooting',
-  'Component replacement',
-  'Filter and separator replacement',
-  'Lubricant and consumable replacement',
+  'Troubleshooting & diagnostics',
+  'Filter & separator replacement',
+  'Lubricant & consumable replacement',
   'Technical support',
 ]
 
 const processSteps = [
-  { num: '01', title: 'Contact Us', description: 'Contact us with equipment model, serial number and service requirement.' },
-  { num: '02', title: 'Assessment', description: 'Assessment of the equipment and service scope.' },
-  { num: '03', title: 'Parts Arrangement', description: 'Identification and arrangement of required parts/materials.' },
-  { num: '04', title: 'Technical Service', description: 'Technical service according to the agreed scope.' },
-  { num: '05', title: 'Post-Service Checks', description: 'Post-service checks and relevant service information.' },
+  { num: '01', title: 'Contact Us', description: 'Provide equipment model, serial number and service needed.' },
+  { num: '02', title: 'Assessment', description: 'We assess equipment and define the service scope.' },
+  { num: '03', title: 'Parts Arrangement', description: 'Required parts and materials are sourced.' },
+  { num: '04', title: 'Technical Service', description: 'Service carried out to the agreed scope.' },
+  { num: '05', title: 'Post-Service Checks', description: 'Final checks and service documentation.' },
 ]
 
 export default function Maintenance() {
@@ -80,17 +72,15 @@ export default function Maintenance() {
       <section className="bg-[#f6f8fa] py-20 relative overflow-hidden border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl">
-
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
+              className="text-4xl sm:text-6xl font-display font-900 text-[#111827] mb-4 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Maintenance &
               <span className="text-[#0097B2]"> Technical Services</span>
             </h1>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8 font-medium">
-              Aurora Green Industries PLC provides technical maintenance and service support for compressors
-              and industrial equipment, from scheduled preventive maintenance to emergency troubleshooting.
+            <p className="text-gray-600 text-lg sm:text-xl leading-relaxed mb-6 font-medium">
+              Compressor maintenance, service kits, and emergency troubleshooting across Ethiopia.
             </p>
             <Link
               to="/contact"
@@ -104,19 +94,18 @@ export default function Maintenance() {
       </section>
 
       {/* Compressor maintenance overview */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             <div>
               <h2
-                className="text-3xl font-display font-800 text-[#111827] mb-5"
+                className="text-3xl font-display font-800 text-[#111827] mb-4"
                 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
               >
                 Compressor Maintenance
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-7">
-                Our maintenance and technical service team supports compressor maintenance across the service lifecycle,
-                from routine scheduled maintenance to major service interventions.
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Supporting the full compressor service lifecycle — from routine scheduled maintenance to major overhauls.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {serviceItems.map((item) => (
@@ -145,11 +134,11 @@ export default function Maintenance() {
       </section>
 
       {/* All service types */}
-      <section className="py-20 bg-[#f6f8fa]">
+      <section className="py-16 bg-[#f6f8fa]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
+              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Service Capabilities
@@ -168,16 +157,16 @@ export default function Maintenance() {
                   <Icon size={22} className="text-[#111827]" />
                 </div>
                 <h3
-                  className="text-lg font-display font-700 text-[#111827] mb-2"
-                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
+                  className="text-xl font-display font-800 text-[#111827] mb-2"
+                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                 >
                   {title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed mb-4">{description}</p>
-                <ul className="space-y-1.5">
+                <p className="text-base text-gray-600 leading-relaxed mb-4">{description}</p>
+                <ul className="space-y-2">
                   {items.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-xs text-gray-600">
-                      <span className="w-1 h-1 rounded-full bg-[#0097B2] shrink-0" />
+                    <li key={item} className="flex items-center gap-2 text-sm font-semibold text-slate-700">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0097B2] shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -189,17 +178,17 @@ export default function Maintenance() {
       </section>
 
       {/* Service process */}
-      <section className="py-20 bg-[#f6f8fa] border-t border-gray-100">
+      <section className="py-16 bg-[#f6f8fa] border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
-              style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+              className="text-3xl sm:text-4xl font-display font-900 text-[#111827] mb-3"
+              style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Service Process
             </h2>
-            <div className="divider-gold w-24 mx-auto mb-4" />
-            <p className="text-gray-600 text-sm">A clear, five-step approach to every service engagement.</p>
+            <div className="divider-gold w-24 mx-auto mb-3" />
+            <p className="text-gray-600 text-base font-medium">Five clear steps from contact to completion.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -209,8 +198,8 @@ export default function Maintenance() {
                   style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}>
                   {num}
                 </div>
-                <h3 className="text-[#111827] font-semibold text-sm mb-2">{title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{description}</p>
+                <h3 className="text-[#111827] font-bold text-base mb-1.5">{title}</h3>
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{description}</p>
               </div>
             ))}
           </div>

@@ -7,72 +7,72 @@ const services = [
     icon: Package,
     title: 'Genuine Atlas Copco Parts',
     description:
-      'We supply genuine Atlas Copco parts for compressor maintenance and reliable operation. Includes compressor elements, valves, motors and other genuine compressor components.',
+      'Factory-certified compressor elements, valves, motors, and OEM components for optimal reliability.',
     accent: '#0097B2',
-    bg: '#f3f4f6',
+    bg: '#f6f8fa',
   },
   {
     id: 'service-kits',
     icon: Wrench,
     title: 'Service Kits',
     description:
-      'Pre-packaged maintenance kits for scheduled compressor service interventions — designed to make planned maintenance efficient and complete.',
+      'Pre-packaged maintenance kits tailored for scheduled compressor intervals and rapid turnaround.',
     accent: '#0097B2',
-    bg: '#f3f4f6',
+    bg: '#f6f8fa',
   },
   {
     id: 'filters-separators',
     icon: Filter,
     title: 'Filters & Separators',
     description:
-      'Air, oil and line filtration solutions, including applicable filters and separators that support clean, reliable compressed-air systems.',
+      'Precision air, oil, and line filtration solutions ensuring clean, dry compressed-air delivery.',
     accent: '#0097B2',
-    bg: '#f3f4f6',
+    bg: '#f6f8fa',
   },
   {
     id: 'lubricants',
     icon: Droplets,
     title: 'Lubricants & Consumables',
     description:
-      'Atlas Copco lubricants and consumables applicable to compressor maintenance and operation, sourced as genuine products.',
+      'Genuine Atlas Copco synthetic and mineral compressor lubricants engineered for maximum lifespan.',
     accent: '#0097B2',
-    bg: '#f3f4f6',
+    bg: '#f6f8fa',
   },
   {
     id: 'maintenance-plans',
     icon: CheckCircle2,
     title: 'Preventive & Predictive Maintenance',
     description:
-      'Maintenance and service support designed around scheduled interventions and equipment requirements, helping customers plan and budget for uptime.',
+      'Customized maintenance agreements, regular inspections, and predictive diagnostic interventions.',
     accent: '#0097B2',
-    bg: '#f3f4f6',
+    bg: '#f6f8fa',
   },
   {
     id: 'digital-services',
     icon: Cpu,
-    title: 'Digital & Smart Services — Industry 4.0',
+    title: 'Digital & Smart Services (Industry 4.0)',
     description:
-      'Digital and smart services including Optimizer and SMARTLINK solutions for connected compressor monitoring and data-driven maintenance.',
+      'SMARTLINK 24/7 connectivity and Optimizer controllers for automated data-driven efficiency.',
     accent: '#0097B2',
-    bg: '#f3f4f6',
+    bg: '#f6f8fa',
   },
   {
     id: 'energy-optimization',
     icon: Zap,
     title: 'Energy & Optimization Services',
     description:
-      'Energy recovery, AIRScan, AIRnet, controllers and upgrades within the CSO portfolio, supporting compressed-air efficiency.',
+      'Professional AIRScan audits, energy recovery units, and AIRnet leak-free piping networks.',
     accent: '#0097B2',
-    bg: '#f3f4f6',
+    bg: '#f6f8fa',
   },
   {
     id: 'air-treatment',
     icon: Filter,
     title: 'Air Treatment Accessories',
     description:
-      'Air-treatment accessories supporting compressed-air system requirements including dryers, aftercoolers, and related components.',
+      'High-efficiency refrigerated and desiccant dryers, aftercoolers, and condensate drains.',
     accent: '#0097B2',
-    bg: '#f3f4f6',
+    bg: '#f6f8fa',
   },
 ]
 
@@ -84,16 +84,14 @@ export default function AtlasCopco() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl">
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
+              className="text-4xl sm:text-6xl font-display font-900 text-[#111827] mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Atlas Copco Compressor
               <span className="text-[#0097B2]"> Service & Optimization</span>
             </h1>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8 font-medium">
-              Aurora Green Industries PLC is an Authorised Distributor for Atlas Copco branded products.
-              We provide Compressor Service and Optimization (CSO) solutions covering genuine parts, maintenance,
-              digital services and compressed-air optimization.
+            <p className="text-gray-600 text-lg sm:text-xl leading-relaxed mb-8 font-medium">
+              Authorised Atlas Copco Distributor in Ethiopia for Compressor Service & Optimization (CSO), genuine parts, and expert maintenance.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -123,7 +121,7 @@ export default function AtlasCopco() {
               className="text-3xl sm:text-4xl font-display font-800 text-slate-900 mb-4"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
-              CSO Product & Service Portfolio
+              CSO Product & Service Spans
             </h2>
             <div className="w-24 h-1 bg-[#0097B2] mx-auto mb-4" />
             <p className="text-gray-500 max-w-2xl mx-auto">
@@ -146,12 +144,12 @@ export default function AtlasCopco() {
                 </div>
                 <div>
                   <h3
-                    className="text-lg font-display font-700 text-[#111827] mb-2"
-                    style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
+                    className="text-xl font-display font-800 text-[#111827] mb-2"
+                    style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                   >
                     {title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
+                  <p className="text-base text-gray-600 leading-relaxed">{description}</p>
                 </div>
               </div>
             ))}

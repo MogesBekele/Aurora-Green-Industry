@@ -39,12 +39,10 @@ function useReveal() {
 }
 
 const atlasFeatures = [
-  'Genuine Atlas Copco parts',
-  'Service kits',
-  'Filters & separators',
-  'Lubricants & consumables',
+  'Genuine Atlas Copco parts & service kits',
+  'Filters, separators & lubricants',
   'Preventive & predictive maintenance',
-  'Digital & smart services',
+  'Digital & smart services (SMARTLINK)',
   'Energy & optimization services',
   'Air treatment accessories',
 ]
@@ -100,24 +98,19 @@ export default function Home() {
             <span className="block text-[#0097B2]">INDUSTRIES PLC</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl text-gray-300 font-medium mb-3">
+          <p className="text-2xl sm:text-3xl text-white font-bold mb-4">
             Compressed Air & Industrial Solutions
           </p>
-          <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-2">
-            Atlas Copco Compressors, Genuine Parts & Professional Service
-          </p>
-          <p className="text-sm sm:text-base text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Aurora Green Industries PLC provides industrial customers in Ethiopia with compressed-air equipment,
-            Atlas Copco products and genuine spare parts, compressor maintenance and technical services, as well
-            as industrial and medical gases and related gas equipment.
+          <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-8 font-medium">
+            Authorised distributor of Atlas Copco compressors, genuine parts, maintenance, and industrial & medical gases in Ethiopia.
           </p>
 
           {/* Value props */}
-          <div className="flex flex-wrap justify-center gap-6 mb-10">
+          <div className="flex flex-wrap justify-center gap-8 mb-10">
             {['Reliable Equipment', 'Genuine Parts', 'Technical Expertise'].map((v) => (
-              <div key={v} className="flex items-center gap-2 text-white">
-                <CheckCircle2 size={16} className="text-[#0097B2]" />
-                <span className="text-sm font-medium">{v}</span>
+              <div key={v} className="flex items-center gap-2.5 text-white">
+                <CheckCircle2 size={20} className="text-[#0097B2]" />
+                <span className="text-base sm:text-lg font-semibold">{v}</span>
               </div>
             ))}
           </div>
@@ -159,30 +152,27 @@ export default function Home() {
                 <span className="text-[#111827] text-sm font-semibold">Atlas Copco CSO Solutions</span>
               </div>
               <h2
-                className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-5 leading-tight"
-                style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+                className="text-3xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
+                style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
               >
                 Atlas Copco Compressed
                 <span className="text-[#0097B2]"> Air Solutions</span>
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                Aurora Green Industries PLC provides Atlas Copco Compressor Service and Optimization
-                solutions for customers in Ethiopia. From genuine spare parts and service kits to
-                maintenance, digital services and compressed-air optimization, we support customers
-                in maintaining reliable compressed-air systems.
+              <p className="text-gray-600 text-lg leading-relaxed mb-6 font-medium">
+                Authorised distributor of genuine Atlas Copco parts, preventive maintenance kits, and smart diagnostics.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8">
                 {atlasFeatures.map((f) => (
-                  <div key={f} className="flex items-start gap-2.5">
-                    <CheckCircle2 size={16} className="text-[#0097B2] mt-0.5 shrink-0" />
-                    <span className="text-sm text-gray-700">{f}</span>
+                  <div key={f} className="flex items-center gap-2.5">
+                    <CheckCircle2 size={18} className="text-[#0097B2] shrink-0" />
+                    <span className="text-base font-semibold text-slate-800">{f}</span>
                   </div>
                 ))}
               </div>
               <Link
                 to="/atlas-copco"
                 id="home-atlas-cta"
-                className="btn-green inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-full text-sm"
+                className="btn-green inline-flex items-center gap-2 text-white font-bold px-7 py-3.5 rounded-full text-sm"
               >
                 Explore Atlas Copco Solutions
                 <ArrowRight size={15} />
@@ -200,20 +190,20 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/30" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-                    <p className="text-white text-sm font-semibold mb-1">Authorised Distributor</p>
-                    <p className="text-gray-300 text-xs">Atlas Copco branded products — Addis Ababa, Ethiopia</p>
+                    <p className="text-white text-base font-bold mb-1">Authorised Distributor</p>
+                    <p className="text-gray-200 text-xs">Atlas Copco branded products — Addis Ababa, Ethiopia</p>
                   </div>
                 </div>
               </div>
               {/* Floating stat cards */}
               <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-4 border border-gray-100">
-                <div className="flex items-center gap-2">
-                  <div className="w-9 h-9 rounded-lg bg-[#f6f8fa] flex items-center justify-center">
-                    <Shield size={18} className="text-[#111827]" />
+                <div className="flex items-center gap-2.5">
+                  <div className="w-10 h-10 rounded-lg bg-[#f6f8fa] flex items-center justify-center">
+                    <Shield size={20} className="text-[#111827]" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500">Genuine Parts</p>
-                    <p className="text-sm font-bold text-[#111827]">Atlas Copco</p>
+                    <p className="text-xs text-gray-500 font-medium">Genuine Parts</p>
+                    <p className="text-base font-bold text-[#111827]">Atlas Copco</p>
                   </div>
                 </div>
               </div>
@@ -242,31 +232,29 @@ export default function Home() {
                 <span className="text-[#0097B2] text-sm font-semibold">Gas Supply</span>
               </div>
               <h2
-                className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-5 leading-tight"
-                style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+                className="text-3xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
+                style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
               >
                 Industrial & Medical
                 <span className="text-[#0097B2]"> Gas Supply</span>
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                We supply oxygen, nitrogen, argon, carbon dioxide and acetylene for healthcare,
-                manufacturing, welding, fabrication, laboratories and industrial applications.
-                Cylinder supply, gas-handling equipment and delivery solutions available.
+              <p className="text-gray-600 text-lg leading-relaxed mb-6 font-medium">
+                High-purity oxygen, nitrogen, argon, CO₂, and acetylene with full cylinder supply and accessories.
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
                 {['Medical Oxygen', 'Industrial Oxygen', 'Nitrogen', 'Argon', 'Carbon Dioxide', 'Acetylene'].map((g) => (
                   <div
                     key={g}
-                    className="bg-slate-50 rounded-xl px-3 py-2.5 text-center border border-[#0097B2]/15"
+                    className="bg-[#f6f8fa] rounded-xl px-3 py-3 text-center border border-gray-200"
                   >
-                    <span className="text-sm font-medium text-[#1f2937]">{g}</span>
+                    <span className="text-sm sm:text-base font-bold text-[#111827]">{g}</span>
                   </div>
                 ))}
               </div>
               <Link
                 to="/gases"
                 id="home-gas-explore"
-                className="btn-gold inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-full text-sm"
+                className="btn-gold inline-flex items-center gap-2 text-white font-bold px-7 py-3.5 rounded-full text-sm"
               >
                 Explore Gas Solutions
                 <ArrowRight size={15} />
@@ -281,15 +269,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
-              style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+              className="text-3xl sm:text-5xl font-display font-900 text-[#111827] mb-4"
+              style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Industries We Serve
             </h2>
             <div className="divider-gold w-24 mx-auto mb-4" />
-            <p className="text-gray-600 max-w-xl mx-auto text-sm font-medium">
-              Providing compressed-air solutions, Atlas Copco parts, maintenance, gases and gas equipment
-              across Ethiopia's industrial sectors.
+            <p className="text-gray-600 max-w-xl mx-auto text-base sm:text-lg font-medium">
+              Tailored compressed-air and gas engineering solutions across Ethiopia's key sectors.
             </p>
           </div>
 
@@ -303,7 +290,7 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-[#f6f8fa] flex items-center justify-center mx-auto mb-3 group-hover:bg-[#0097B2] transition-colors">
                   <Icon size={22} className="text-[#111827] group-hover:text-white transition-colors" />
                 </div>
-                <p className="text-sm font-semibold text-gray-800 group-hover:text-[#0097B2] transition-colors">
+                <p className="text-base font-bold text-gray-800 group-hover:text-[#0097B2] transition-colors">
                   {label}
                 </p>
               </Link>
@@ -313,17 +300,16 @@ export default function Home() {
       </section>
 
       {/* ── Closing CTA ── */}
-      <section className="py-24 bg-white relative overflow-hidden border-t border-gray-100">
+      <section className="py-20 bg-white relative overflow-hidden border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <h2
-            className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-5"
-            style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
+            className="text-3xl sm:text-5xl font-display font-900 text-[#111827] mb-4 leading-tight"
+            style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
           >
-            Need a Compressor, Part, Service or Industrial Gas?
+            Need Equipment, Parts, or Gas Supply?
           </h2>
-          <p className="text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
-            Tell us what you need. Our team will help you identify the appropriate product or service
-            for your equipment and application.
+          <p className="text-gray-600 mb-8 max-w-xl mx-auto text-lg font-medium">
+            Contact our specialists for quotes, parts verification, or service dispatch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

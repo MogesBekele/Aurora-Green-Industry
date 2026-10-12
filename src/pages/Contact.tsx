@@ -97,15 +97,14 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
+              className="text-4xl sm:text-6xl font-display font-900 text-[#111827] mb-5 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Let's Discuss
               <span className="text-[#0097B2]"> Your Requirement</span>
             </h1>
-            <p className="text-gray-600 text-lg leading-relaxed font-medium">
-              Whether you need an Atlas Copco part, compressor service, industrial gas, cylinder, valve,
-              pressure gauge or another industrial solution, contact Aurora Green Industries PLC.
+            <p className="text-gray-600 text-lg sm:text-xl leading-relaxed font-medium">
+              Contact our engineering team for rapid parts quotes, compressor service dispatch, or gas supply logistics.
             </p>
           </div>
         </div>
@@ -120,7 +119,7 @@ export default function Contact() {
             <div className="lg:col-span-1 space-y-6">
               <div>
                 <h2
-                  className="text-2xl font-display font-800 text-[#111827] mb-6"
+                  className="text-3xl font-display font-800 text-[#111827] mb-6"
                   style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                 >
                   Contact Information
@@ -131,10 +130,10 @@ export default function Contact() {
                       <Phone size={18} className="text-white" />
                     </div>
                     <div>
-                      <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Phone</p>
+                      <p className="text-xs text-gray-500 uppercase tracking-wider mb-1 font-semibold">Direct Phone</p>
                       <a
                         href="tel:+251944999966"
-                        className="text-[#111827] font-semibold hover:text-[#007b91] transition-colors"
+                        className="text-lg font-bold text-[#111827] hover:text-[#0097B2] transition-colors"
                       >
                         +251 944 999 966
                       </a>

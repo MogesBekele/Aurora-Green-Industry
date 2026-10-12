@@ -5,22 +5,20 @@ const industries = [
   {
     id: 'healthcare',
     icon: Stethoscope,
-    title: 'Healthcare',
+    title: 'Healthcare & Hospitals',
     color: '#0097B2',
     bg: '#f6f8fa',
-    description:
-      'Medical oxygen, gas cylinders, cylinder valves, pressure gauges, gas equipment, gas supply and applicable technical support for hospitals and healthcare facilities.',
-    solutions: ['Medical oxygen supply', 'Gas cylinders', 'Cylinder valves', 'Pressure gauges', 'Gas equipment', 'Technical support'],
+    description: 'Medical oxygen, cylinder supply, manifolds, and dedicated hospital technical support.',
+    solutions: ['Medical oxygen supply', 'Gas cylinders', 'Cylinder valves', 'Pressure gauges', 'Gas equipment'],
   },
   {
     id: 'manufacturing',
     icon: Factory,
-    title: 'Manufacturing',
+    title: 'Manufacturing & Plants',
     color: '#111827',
     bg: '#f6f8fa',
-    description:
-      'Atlas Copco compressors and CSO solutions, genuine parts, service kits, filters, lubricants, compressor maintenance and industrial gases for manufacturing facilities.',
-    solutions: ['Atlas Copco CSO', 'Genuine spare parts', 'Service kits', 'Compressor maintenance', 'Industrial gases', 'Filters & lubricants'],
+    description: 'Atlas Copco CSO compressors, preventive service plans, genuine filtration, and plant utility gases.',
+    solutions: ['Atlas Copco CSO', 'Genuine spare parts', 'Service kits', 'Compressor maintenance', 'Industrial gases'],
   },
   {
     id: 'welding-fabrication',
@@ -28,59 +26,53 @@ const industries = [
     title: 'Welding & Metal Fabrication',
     color: '#0097B2',
     bg: '#f6f8fa',
-    description:
-      'Oxygen, acetylene, argon, carbon dioxide, cylinders, cylinder valves, pressure gauges, regulators and related equipment for welding and fabrication operations.',
-    solutions: ['Oxygen', 'Acetylene', 'Argon shielding gas', 'CO₂', 'Cylinders & valves', 'Regulators & gauges'],
+    description: 'Oxygen, acetylene, argon shielding gas, cutting regulators, and safety valves.',
+    solutions: ['Oxygen', 'Acetylene', 'Argon shielding gas', 'CO₂', 'Cylinders & valves'],
   },
   {
     id: 'construction',
     icon: HardHat,
-    title: 'Construction',
+    title: 'Construction & Infrastructure',
     color: '#484f58',
     bg: '#f6f8fa',
-    description:
-      'Compressors, genuine compressor spare parts, compressor maintenance, industrial gases, gas cylinders, valves and pressure gauges for construction applications.',
-    solutions: ['Compressors', 'Genuine spare parts', 'Compressor maintenance', 'Industrial gases', 'Gas cylinders', 'Valves & gauges'],
+    description: 'Mobile and stationary air compressors, genuine service kits, and on-site gas supply.',
+    solutions: ['Compressors', 'Genuine spare parts', 'Compressor maintenance', 'Industrial gases', 'Gas cylinders'],
   },
   {
     id: 'mining',
     icon: Building2,
-    title: 'Mining',
+    title: 'Mining & Heavy Exploration',
     color: '#111827',
     bg: '#f6f8fa',
-    description:
-      'Compressed-air equipment, genuine Atlas Copco spare parts, compressor maintenance, preventive maintenance support, industrial gases and gas equipment for mining operations.',
-    solutions: ['Compressed-air equipment', 'Atlas Copco parts', 'Preventive maintenance', 'Compressor service', 'Industrial gases', 'Gas equipment'],
+    description: 'Severe-duty compressed-air solutions, rapid parts dispatch, and field maintenance support.',
+    solutions: ['Compressed-air equipment', 'Atlas Copco parts', 'Preventive maintenance', 'Industrial gases'],
   },
   {
     id: 'industrial-facilities',
     icon: Settings,
-    title: 'Industrial Facilities',
+    title: 'Industrial Facilities & Utilities',
     color: '#0097B2',
     bg: '#f6f8fa',
-    description:
-      'Atlas Copco compressors and CSO solutions, genuine parts, maintenance, industrial gases and gas equipment for industrial facilities and plants.',
-    solutions: ['Atlas Copco CSO', 'Genuine parts', 'Preventive maintenance', 'Major service', 'Industrial gases', 'Gas equipment'],
+    description: 'Compressed-air optimization, AIRnet piping systems, and bulk industrial gas networks.',
+    solutions: ['Atlas Copco CSO', 'Genuine parts', 'Preventive maintenance', 'Industrial gases'],
   },
   {
     id: 'laboratories',
     icon: FlaskConical,
-    title: 'Laboratories & Technical Applications',
+    title: 'Laboratories & Research',
     color: '#484f58',
     bg: '#f6f8fa',
-    description:
-      'Applicable oxygen, nitrogen, argon and carbon dioxide supply together with cylinders and gas-handling equipment for laboratories and technical applications.',
+    description: 'High-precision nitrogen, argon, and CO₂ with dual-stage regulators and ultra-pure cylinders.',
     solutions: ['Oxygen', 'Nitrogen', 'Argon', 'CO₂', 'Gas cylinders', 'Gas-handling equipment'],
   },
   {
     id: 'water-drilling',
     icon: Droplets,
-    title: 'Water, Drilling & Field Applications',
+    title: 'Water Well Drilling & Field Works',
     color: '#0097B2',
     bg: '#f6f8fa',
-    description:
-      'Where applicable, compressors, compressor parts, maintenance, industrial gases and gas equipment for water, drilling and field operations.',
-    solutions: ['Compressors', 'Compressor parts', 'Field maintenance', 'Industrial gases', 'Gas equipment', 'Technical support'],
+    description: 'High-pressure compressor support, field maintenance response, and industrial gas logistics.',
+    solutions: ['Compressors', 'Compressor parts', 'Field maintenance', 'Industrial gases'],
   },
 ]
 
@@ -91,27 +83,24 @@ export default function Industries() {
       <section className="bg-[#f6f8fa] py-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
-
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
+              className="text-4xl sm:text-6xl font-display font-900 text-[#111827] mb-4 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Industrial Solutions for
               <span className="text-[#0097B2]"> Ethiopia's Industries</span>
             </h1>
-            <p className="text-gray-600 text-lg leading-relaxed font-medium">
-              Different industries have different equipment, gas and maintenance requirements. Aurora Green Industries
-              provides compressed-air solutions, genuine Atlas Copco parts, maintenance and technical services,
-              industrial and medical gases, cylinders and gas equipment.
+            <p className="text-gray-600 text-lg sm:text-xl leading-relaxed font-medium">
+              Compressed-air equipment, genuine parts, maintenance, and gas solutions for Ethiopia's key sectors.
             </p>
           </div>
         </div>
       </section>
 
       {/* Industries grid */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {industries.map(({ id, icon: Icon, title, description, solutions, color, bg }) => (
               <div
                 key={id}
@@ -127,18 +116,18 @@ export default function Industries() {
                   </div>
                   <div className="flex-1">
                     <h3
-                      className="text-xl font-display font-700 text-[#111827] mb-3"
-                      style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
+                      className="text-xl sm:text-2xl font-display font-800 text-[#111827] mb-2"
+                      style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                     >
                       {title}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed mb-4">{description}</p>
+                    <p className="text-base text-gray-600 leading-relaxed mb-4">{description}</p>
                     <div className="flex flex-wrap gap-2">
                       {solutions.map((s) => (
                         <span
                           key={s}
-                          className="text-xs px-2.5 py-1 rounded-full border text-gray-700"
-                          style={{ borderColor: `${color}30`, backgroundColor: bg }}
+                          className="text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full border text-gray-800"
+                          style={{ borderColor: `${color}40`, backgroundColor: bg }}
                         >
                           {s}
                         </span>
@@ -153,17 +142,16 @@ export default function Industries() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#f6f8fa]">
+      <section className="py-14 bg-[#f6f8fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2
-            className="text-2xl font-display font-800 text-[#111827] mb-4"
+            className="text-2xl font-display font-800 text-[#111827] mb-3"
             style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
           >
             Don't See Your Industry?
           </h2>
-          <p className="text-gray-500 mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-            Contact us with your specific requirements. Our team will assess whether we can support
-            your industry's compressed-air, gas or maintenance needs.
+          <p className="text-gray-500 mb-7 max-w-lg mx-auto text-sm leading-relaxed">
+            Contact us — our team will assess whether we can support your compressed-air, gas or maintenance needs.
           </p>
           <Link
             to="/contact"

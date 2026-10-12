@@ -8,9 +8,8 @@ const gases = [
     icon: Heart,
     color: '#0097B2',
     bg: '#f6f8fa',
-    description:
-      'We supply medical oxygen for healthcare applications, supporting hospitals and other healthcare facilities that depend on a reliable oxygen supply.',
-    applications: ['Hospitals', 'Healthcare facilities', 'Respiratory therapy', 'Emergency services'],
+    description: 'High-purity medical-grade oxygen for hospitals, clinics, and emergency facilities.',
+    applications: ['Hospitals', 'Healthcare clinics', 'Respiratory therapy', 'Emergency response'],
   },
   {
     id: 'industrial-oxygen',
@@ -18,9 +17,8 @@ const gases = [
     icon: Flame,
     color: '#0097B2',
     bg: '#f6f8fa',
-    description:
-      'Industrial oxygen is used in welding, metal fabrication, cutting and other industrial processes. Supplied in cylinders according to customer requirements.',
-    applications: ['Metal cutting', 'Welding', 'Fabrication', 'Industrial processes'],
+    description: 'High-efficiency oxygen for metal cutting, fabrication, and thermal processes.',
+    applications: ['Metal cutting', 'Oxy-fuel welding', 'Heavy fabrication', 'Industrial smelting'],
   },
   {
     id: 'nitrogen',
@@ -28,9 +26,8 @@ const gases = [
     icon: FlaskConical,
     color: '#111827',
     bg: '#f6f8fa',
-    description:
-      'Nitrogen is used in industrial, manufacturing and technical applications where an inert gas is required for blanketing, purging and pressure testing.',
-    applications: ['Industrial processing', 'Manufacturing', 'Purging', 'Pressure testing'],
+    description: 'Inert dry nitrogen for blanketing, purging, pressure testing, and manufacturing.',
+    applications: ['Pipeline purging', 'Pressure testing', 'Laser cutting', 'Food & pharma packaging'],
   },
   {
     id: 'argon',
@@ -38,9 +35,8 @@ const gases = [
     icon: Hammer,
     color: '#484f58',
     bg: '#f6f8fa',
-    description:
-      'Argon is commonly used as a shielding gas in welding and metal fabrication. Aurora Green Industries supplies argon for customers requiring shielding-gas supply.',
-    applications: ['MIG/TIG welding', 'Metal fabrication', 'Shielding gas', 'Metallurgy'],
+    description: 'Ultra-pure shielding gas for TIG/MIG welding and stainless steel fabrication.',
+    applications: ['TIG & MIG welding', 'Stainless fabrication', 'Aluminum welding', 'Specialty metallurgy'],
   },
   {
     id: 'carbon-dioxide',
@@ -48,9 +44,8 @@ const gases = [
     icon: Factory,
     color: '#484f58',
     bg: '#f6f8fa',
-    description:
-      'Aurora Green Industries supplies CO₂ in cylinders for customers requiring carbon dioxide gas for their applications.',
-    applications: ['Industrial applications', 'Gas mixtures', 'MIG welding', 'Various industries'],
+    description: 'Industrial and beverage-grade CO₂ for welding shielding and refrigeration.',
+    applications: ['MIG welding shielding', 'Food & beverage', 'Water treatment', 'pH balance systems'],
   },
   {
     id: 'acetylene',
@@ -58,9 +53,8 @@ const gases = [
     icon: Flame,
     color: '#0097B2',
     bg: '#f6f8fa',
-    description:
-      'Acetylene is used in gas welding, cutting and other high-temperature industrial applications. Aurora Green Industries supplies acetylene for welding and fabrication requirements.',
-    applications: ['Oxy-acetylene welding', 'Metal cutting', 'Brazing', 'High-temp applications'],
+    description: 'High-temperature fuel gas for oxy-acetylene welding, metal cutting, and brazing.',
+    applications: ['Oxy-acetylene cutting', 'Field welding', 'Brazing & heating', 'Structural steel'],
   },
 ]
 
@@ -71,18 +65,15 @@ export default function Gases() {
       <section className="bg-[#f6f8fa] py-20 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
-
             <h1
-              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-5 leading-tight"
+              className="text-4xl sm:text-6xl font-display font-900 text-[#111827] mb-4 leading-tight"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Industrial & Medical
               <span className="block text-[#0097B2]">Gases in Ethiopia</span>
             </h1>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8 font-medium">
-              Aurora Green Industries PLC supplies industrial and medical gases for healthcare, manufacturing,
-              welding and fabrication, laboratories, construction and other industrial applications. Our gas
-              portfolio includes oxygen, nitrogen, argon, carbon dioxide and acetylene.
+            <p className="text-gray-600 text-lg sm:text-xl leading-relaxed mb-6 font-medium">
+              Reliable cylinder gas supply for healthcare, manufacturing, and fabrication across Ethiopia.
             </p>
             <Link
               to="/contact"
@@ -96,18 +87,18 @@ export default function Gases() {
       </section>
 
       {/* Gas grid */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <h2
-              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-4"
+              className="text-3xl sm:text-4xl font-display font-800 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
-              Our Gas Portfolio
+              Our Gas Products
             </h2>
-            <div className="divider-gold w-24 mx-auto mb-4" />
+            <div className="divider-gold w-24 mx-auto mb-3" />
             <p className="text-gray-500 max-w-xl mx-auto text-sm">
-              Cylinder supply, gas-handling equipment and delivery solutions for each product.
+              Cylinder supply, gas-handling equipment and delivery for each product.
             </p>
           </div>
 
@@ -127,17 +118,17 @@ export default function Gases() {
                     <Icon size={22} style={{ color }} />
                   </div>
                   <h3
-                    className="text-xl font-display font-700 text-[#111827] mb-3"
-                    style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 700 }}
+                    className="text-xl font-display font-800 text-[#111827] mb-2"
+                    style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
                   >
                     {title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">{description}</p>
-                  <div className="flex flex-wrap gap-1.5">
+                  <p className="text-base text-gray-600 leading-relaxed mb-4">{description}</p>
+                  <div className="flex flex-wrap gap-2">
                     {applications.map((app) => (
                       <span
                         key={app}
-                        className="text-xs px-2.5 py-1 rounded-full bg-gray-50 text-gray-600 border border-gray-100"
+                        className="text-xs sm:text-sm font-semibold px-3 py-1 rounded-full bg-gray-50 text-gray-700 border border-gray-200"
                       >
                         {app}
                       </span>
@@ -151,18 +142,17 @@ export default function Gases() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#f6f8fa]">
+      <section className="py-14 bg-[#f6f8fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-white border border-gray-200 shadow-sm rounded-2xl p-10 text-center">
+          <div className="bg-white border border-gray-200 shadow-sm rounded-2xl p-8 text-center">
             <h2
-              className="text-2xl font-display font-800 text-[#111827] mb-4"
+              className="text-2xl font-display font-800 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800 }}
             >
               Gas Supply Request
             </h2>
-            <p className="text-gray-600 mb-6 leading-relaxed max-w-xl mx-auto text-sm">
-              Contact us with the gas required, quantity, cylinder size, delivery location and required frequency.
-              Our team will confirm availability and arrange supply.
+            <p className="text-gray-600 mb-5 leading-relaxed max-w-lg mx-auto text-sm">
+              Contact us with the gas type, quantity, cylinder size, and delivery location.
             </p>
             <Link
               to="/contact"
