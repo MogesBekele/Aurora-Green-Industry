@@ -214,15 +214,6 @@ export default function AtlasCopco() {
                 id={`service-card-${id}`}
                 className="reveal relative overflow-hidden rounded-3xl p-8 sm:p-10 shadow-xl bg-[#008ba4] text-white flex flex-col justify-between group transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
               >
-                {/* Atlas Copco signature angled polygon on the right */}
-                <div
-                  className="absolute right-0 top-0 bottom-0 w-2/5 pointer-events-none opacity-20"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)',
-                    clipPath: 'polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)',
-                  }}
-                />
-
                 <div className="relative z-10">
                   <h3
                     className="text-2xl sm:text-3xl font-display font-900 text-white mb-3"
