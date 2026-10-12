@@ -14,7 +14,6 @@ import { useRevealAll } from '../hooks/useReveal'
 const highlightStats = [
   { value: '100%', label: 'Genuine OEM Parts', detail: 'Factory certified' },
   { value: '24/7', label: 'SMARTLINK Support', detail: 'Real-time telemetry' },
-  { value: 'Up to 30%', label: 'Energy Savings', detail: 'With AIRScan audits' },
   { value: 'Ethiopia', label: 'Nationwide Dispatch', detail: 'From Addis Ababa' },
 ]
 
@@ -131,7 +130,7 @@ export default function AtlasCopco() {
       {/* ── Key Highlights Strip ── */}
       <section className="bg-[#f6f8fa] border-b border-gray-200 py-8">
         <div className="max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-14">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             {highlightStats.map(({ value, label, detail }) => (
               <div key={label} className="p-3">
                 <p className="text-2xl sm:text-4xl font-display font-900 text-[#007c92]" style={{ fontFamily: 'Outfit, sans-serif' }}>
