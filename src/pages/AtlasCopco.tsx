@@ -10,52 +10,6 @@ import {
 } from 'lucide-react'
 import { useRevealAll } from '../hooks/useReveal'
 
-const serviceCards = [
-  {
-    id: 'compressors',
-    title: 'Piston & Screw Compressors',
-    subtitle: 'Explore our complete range of Atlas Copco air compressors for every industrial application across Ethiopia.',
-    services: [
-      'Piston Air Compressors & High-Pressure Boosters',
-      'Rotary Screw Compressors (GA / GX Series)',
-      'Oil-Free Air Compressors (Class 0 Purity)',
-      'Variable Speed Drive (VSD) Energy Savers',
-    ],
-  },
-  {
-    id: 'genuine-parts',
-    title: 'Genuine OEM Parts & Service Kits',
-    subtitle: 'Maximize uptime and safeguard equipment with factory-certified spare parts and scheduled interval kits.',
-    services: [
-      'Factory-Certified OEM Elements, Valves & Motors',
-      'Pre-Packaged 4,000h & 8,000h Maintenance Kits',
-      'Precision Air Intake, Oil Filters & Separator Elements',
-      'Roto-Inject & Roto-Xtend Premium Synthetic Lubricants',
-    ],
-  },
-  {
-    id: 'maintenance-services',
-    title: 'Compressor Service & Field Maintenance',
-    subtitle: 'Benefit from factory-trained engineers supporting your installation throughout its lifecycle.',
-    services: [
-      'Preventive Maintenance Contracts & Minor/Major Overhauls',
-      'Vibration Analysis, Thermographic & Element Inspections',
-      'Factory-Certified Diagnostic & Repair Interventions',
-      'Emergency On-Site Response Across All Ethiopian Hubs',
-    ],
-  },
-  {
-    id: 'air-treatment-optimization',
-    title: 'Air Treatment, Piping & Energy Audits',
-    subtitle: 'End-to-end air distribution and digital monitoring solutions designed for optimal energy efficiency.',
-    services: [
-      'Refrigerated (FD/FX) & High-Efficiency Desiccant Dryers',
-      'Corrosion-Free AIRnet Leak-Free Aluminium Piping',
-      'SMARTLINK 24/7 Cloud Telemetry & Predictive Alerts',
-      'AIRScan Energy Audits with Up to 30% Power Reductions',
-    ],
-  },
-]
 
 const highlightStats = [
   { value: '100%', label: 'Genuine OEM Parts', detail: 'Factory certified' },
@@ -191,72 +145,6 @@ export default function AtlasCopco() {
         </div>
       </section>
 
-      {/* ── Product & Service Portfolio (Atlas Copco Cyan Cards with Bold Lists on Gray Background) ── */}
-      <section className="py-20 lg:py-28 bg-[#edf0f2] border-t border-b border-gray-300">
-        <div className="max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-14">
-          <div className="reveal text-center mb-14 max-w-2xl mx-auto">
-            <h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-display font-900 text-[#111827] mb-3"
-              style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
-            >
-              Explore Our Portfolio
-            </h2>
-            <div className="w-20 h-1 bg-[#008ba4] mx-auto mb-3 rounded-full" />
-            <p className="text-gray-600 text-base font-semibold">
-              Atlas Copco compressed air equipment, genuine parts, and expert service spans.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 stagger-children">
-            {serviceCards.map(({ id, title, subtitle, services }) => (
-              <div
-                key={id}
-                id={`service-card-${id}`}
-                className="reveal relative overflow-hidden rounded-3xl p-8 sm:p-10 shadow-xl bg-[#008ba4] text-white flex flex-col justify-between group transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-              >
-                <div className="relative z-10">
-                  <h3
-                    className="text-2xl sm:text-3xl font-display font-900 text-white mb-3"
-                    style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
-                  >
-                    {title}
-                  </h3>
-                  <p className="text-white text-sm sm:text-base leading-relaxed mb-6 font-medium max-w-xl opacity-95">
-                    {subtitle}
-                  </p>
-
-                  {/* Service provided list in BOLD */}
-                  <div className="mb-8 pt-3 border-t border-white/20">
-                    <p className="text-xs uppercase tracking-wider font-black text-white/90 mb-3.5">
-                      Services &amp; Equipment Provided:
-                    </p>
-                    <ul className="space-y-3">
-                      {services.map((item) => (
-                        <li key={item} className="flex items-start gap-3">
-                          <CheckCircle2 size={20} className="text-white mt-0.5 shrink-0" strokeWidth={2.5} />
-                          <span className="text-base sm:text-lg font-black text-white leading-snug tracking-tight">
-                            {item}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="relative z-10 pt-2">
-                  <Link
-                    to="/contact"
-                    className="bg-white text-[#00748d] hover:bg-gray-100 font-black px-7 py-3.5 rounded-full text-sm sm:text-base inline-flex items-center gap-2.5 shadow-md transition-all transform group-hover:translate-x-1"
-                  >
-                    Contact our expert
-                    <ArrowRight size={18} strokeWidth={2.5} />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── Official Atlas Copco Ethiopia Website Banner ── */}
       <section className="py-14 bg-[#f6f8fa] border-t border-gray-200">
