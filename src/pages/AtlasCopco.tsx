@@ -18,78 +18,50 @@ import {
 } from 'lucide-react'
 import { useRevealAll } from '../hooks/useReveal'
 
-const categories = [
+const serviceCards = [
+  {
+    id: 'compressors',
+    title: 'Piston & Screw Compressors',
+    subtitle: 'Explore our complete range of Atlas Copco air compressors for every industrial application across Ethiopia.',
+    services: [
+      'Piston Air Compressors & High-Pressure Boosters',
+      'Rotary Screw Compressors (GA / GX Series)',
+      'Oil-Free Air Compressors (Class 0 Purity)',
+      'Variable Speed Drive (VSD) Energy Savers',
+    ],
+  },
   {
     id: 'genuine-parts',
-    icon: Package,
-    badge: 'OEM Components',
-    title: 'Genuine Atlas Copco Parts',
-    description:
-      'Factory-certified compressor elements, intake valves, minimum pressure valves, motors, coolers, and OEM replacement components for maximum uptime and equipment longevity.',
-    features: ['100% genuine factory warranty', 'Exact fit & optimal airflow', 'Prevent premature wear', 'Extended compressor lifespan'],
+    title: 'Genuine OEM Parts & Service Kits',
+    subtitle: 'Maximize uptime and safeguard equipment with factory-certified spare parts and scheduled interval kits.',
+    services: [
+      'Factory-Certified OEM Elements, Valves & Motors',
+      'Pre-Packaged 4,000h & 8,000h Maintenance Kits',
+      'Precision Air Intake, Oil Filters & Separator Elements',
+      'Roto-Inject & Roto-Xtend Premium Synthetic Lubricants',
+    ],
   },
   {
-    id: 'service-kits',
-    icon: Wrench,
-    badge: 'Scheduled Maintenance',
-    title: 'Service Kits & Preventative Packs',
-    description:
-      'Engineered preventive maintenance packs tailored for 4,000h, 8,000h, and major overhaul service intervals, containing all needed gaskets, seals, and wear items.',
-    features: ['Pre-packaged convenience', 'All-in-one replacement parts', 'Guaranteed compatibility', 'Reduced planned downtime'],
+    id: 'maintenance-services',
+    title: 'Compressor Service & Field Maintenance',
+    subtitle: 'Benefit from factory-trained engineers supporting your installation throughout its lifecycle.',
+    services: [
+      'Preventive Maintenance Contracts & Minor/Major Overhauls',
+      'Vibration Analysis, Thermographic & Element Inspections',
+      'Factory-Certified Diagnostic & Repair Interventions',
+      'Emergency On-Site Response Across All Ethiopian Hubs',
+    ],
   },
   {
-    id: 'filters-separators',
-    icon: Filter,
-    badge: 'Air Purity',
-    title: 'Filters & Air/Oil Separators',
-    description:
-      'High-efficiency air intake filters, line filters, and air-oil separator elements engineered to minimize pressure drop and guarantee ISO 8573-1 air purity standards.',
-    features: ['Ultra-low oil carryover (< 3 ppm)', 'High dust-holding capacity', 'Lower energy consumption', 'Downstream equipment safety'],
-  },
-  {
-    id: 'lubricants',
-    icon: Droplets,
-    badge: 'Synthetic & Mineral',
-    title: 'Atlas Copco Lubricants (Roto-Inject & Roto-Xtend)',
-    description:
-      'Premium synthetic fluids specifically formulated for severe operating temperatures in Ethiopia, preventing thermal breakdown, varnish, and oxidation.',
-    features: ['Up to 8,000 operating hours', 'Superior thermal stability', 'Anti-foaming chemistry', 'Protection against corrosion'],
-  },
-  {
-    id: 'maintenance-plans',
-    icon: Clock,
-    badge: 'Service Contracts',
-    title: 'Preventive & Predictive Maintenance',
-    description:
-      'Comprehensive planned service agreements, vibration analysis, thermographic scans, and rapid emergency troubleshooting dispatched across industrial hubs in Ethiopia.',
-    features: ['Factory-trained technicians', 'Regular health assessments', 'Emergency on-site response', 'Tailored service contracts'],
-  },
-  {
-    id: 'digital-services',
-    icon: Cpu,
-    badge: 'Industry 4.0',
-    title: 'SMARTLINK & Digital Monitoring',
-    description:
-      'Cloud-enabled 24/7 compressor monitoring. Real-time telemetry, early fault prediction, operating status alerts, and remote optimization through SMARTLINK hardware.',
-    features: ['24/7 remote condition tracking', 'Predictive failure alerts', 'Energy efficiency telemetry', 'Custom performance reports'],
-  },
-  {
-    id: 'energy-optimization',
-    icon: Zap,
-    badge: 'Sustainability & ROI',
-    title: 'AIRScan Energy Audits & Optimization',
-    description:
-      'Professional compressed air auditing that identifies leakages, artificial demand, and pressure losses to reduce electricity expenses by up to 30%.',
-    features: ['Full system pressure profiling', 'Air leak quantification', 'VSD energy retrofit studies', 'Rapid payback period'],
-  },
-  {
-    id: 'air-treatment',
-    icon: Gauge,
-    badge: 'Air Treatment',
-    title: 'Dryers, Piping & Air Treatment',
-    description:
-      'Atlas Copco refrigerated and desiccant dryers (FD & FX series), zero-loss condensate drains, and lightweight leak-free AIRnet aluminium piping distribution systems.',
-    features: ['Stable pressure dew points', 'Zero corrosion AIRnet piping', 'Energy-saving condensate drains', 'Complete air distribution solutions'],
+    id: 'air-treatment-optimization',
+    title: 'Air Treatment, Piping & Energy Audits',
+    subtitle: 'End-to-end air distribution and digital monitoring solutions designed for optimal energy efficiency.',
+    services: [
+      'Refrigerated (FD/FX) & High-Efficiency Desiccant Dryers',
+      'Corrosion-Free AIRnet Leak-Free Aluminium Piping',
+      'SMARTLINK 24/7 Cloud Telemetry & Predictive Alerts',
+      'AIRScan Energy Audits with Up to 30% Power Reductions',
+    ],
   },
 ]
 
@@ -227,74 +199,64 @@ export default function AtlasCopco() {
         </div>
       </section>
 
-      {/* ── Product & Service Catalog Grid (Official Card Style) ── */}
-      <section className="py-20 lg:py-28 bg-white">
+      {/* ── Product & Service Portfolio (Atlas Copco Cyan Cards with Bold Lists on Gray Background) ── */}
+      <section className="py-20 lg:py-28 bg-[#f4f6f8] border-t border-b border-gray-200">
         <div className="max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-14">
-          <div className="reveal text-center mb-16 max-w-3xl mx-auto">
-            <span className="text-[#007c92] font-extrabold uppercase tracking-widest text-xs sm:text-sm">
-              Our Complete Offering
-            </span>
+          <div className="reveal text-center mb-16 max-w-2xl mx-auto">
             <h2
-              className="text-4xl sm:text-5xl lg:text-6xl font-display font-900 text-[#111827] mt-2 mb-4"
+              className="text-4xl sm:text-5xl font-display font-900 text-[#111827] mb-3"
               style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
             >
               Explore Our Portfolio
             </h2>
-            <div className="w-24 h-1.5 bg-[#007c92] mx-auto mb-5 rounded-full" />
-            <p className="text-gray-600 text-lg sm:text-xl font-medium">
-              Explore genuine products, preventive kits, and technical services backed by Atlas Copco engineering.
+            <div className="w-20 h-1 bg-[#007c92] mx-auto mb-3 rounded-full" />
+            <p className="text-gray-600 text-base font-medium">
+              Atlas Copco compressed air equipment, genuine parts, and expert service spans.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
-            {categories.map(({ id, icon: Icon, badge, title, description, features }) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 stagger-children">
+            {serviceCards.map(({ id, title, subtitle, services }) => (
               <div
                 key={id}
-                id={`offering-${id}`}
-                className="reveal flex flex-col bg-white rounded-2xl border border-gray-200 hover:border-[#007c92]/50 shadow-sm hover:shadow-xl transition-all duration-300 p-8 group relative overflow-hidden"
+                id={`service-card-${id}`}
+                className="reveal relative overflow-hidden rounded-3xl p-8 sm:p-10 shadow-xl bg-gradient-to-r from-[#008ba4] via-[#007c92] to-[#005e70] text-white flex flex-col justify-between group transition-all duration-300 hover:shadow-2xl"
               >
-                {/* Top cyan accent line */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gray-100 group-hover:bg-[#007c92] transition-colors" />
+                {/* Atlas Copco signature geometric wave on the right */}
+                <div className="absolute right-0 top-0 bottom-0 w-2/5 bg-white/5 pointer-events-none transform -skew-x-12" />
+                <div className="absolute -bottom-10 -right-10 w-52 h-52 bg-white/5 rounded-full blur-xl pointer-events-none" />
 
-                {/* Badge and Icon */}
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#007c92] bg-[#007c92]/10 px-3 py-1.5 rounded-full">
-                    {badge}
-                  </span>
-                  <div className="w-12 h-12 rounded-xl bg-[#f6f8fa] group-hover:bg-[#007c92] text-[#007c92] group-hover:text-white transition-colors flex items-center justify-center shrink-0">
-                    <Icon size={24} />
-                  </div>
-                </div>
+                <div className="relative z-10">
+                  <h3
+                    className="text-2xl sm:text-3xl font-display font-900 text-white mb-3"
+                    style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
+                  >
+                    {title}
+                  </h3>
+                  <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-6 font-medium max-w-xl">
+                    {subtitle}
+                  </p>
 
-                <h3
-                  className="text-2xl font-display font-900 text-[#111827] mb-3 group-hover:text-[#007c92] transition-colors"
-                  style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 900 }}
-                >
-                  {title}
-                </h3>
-
-                <p className="text-gray-600 text-base leading-relaxed mb-6 flex-grow">
-                  {description}
-                </p>
-
-                <div className="pt-4 border-t border-gray-100 mb-6">
-                  <ul className="space-y-2">
-                    {features.map((feat) => (
-                      <li key={feat} className="flex items-start gap-2.5 text-sm font-semibold text-slate-700">
-                        <CheckCircle2 size={16} className="text-[#007c92] mt-0.5 shrink-0" />
-                        <span>{feat}</span>
+                  {/* Service provided list in BOLD */}
+                  <ul className="space-y-3 mb-8">
+                    {services.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-base sm:text-lg font-bold text-white">
+                        <CheckCircle2 size={20} className="text-white mt-0.5 shrink-0" />
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-between w-full font-bold text-sm text-[#007c92] group-hover:text-[#006073] pt-2"
-                >
-                  <span>Request Inquiry</span>
-                  <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
-                </Link>
+                <div className="relative z-10 pt-2">
+                  <Link
+                    to="/contact"
+                    className="bg-white text-[#007c92] hover:bg-gray-100 font-extrabold px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2 shadow-lg transition-all transform group-hover:translate-x-1"
+                  >
+                    Contact our experts to learn more
+                    <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
